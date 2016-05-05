@@ -1,0 +1,746 @@
+* {
+    margin:0; padding:0;
+}
+/* Картинки */
+IMG{border:0}
+
+/* Таблицы */
+table{border-collapse:collapse;border-spacing:0}
+
+/* Заголовки */
+H1{}
+H2{}
+H3{}
+H4{}
+H5{}
+
+input, textarea {outline:none}
+
+/* Ссылки */
+A{}
+A:hover{}
+
+/* Списки */
+UL{}
+LI{}
+
+/* Таблицы с данными */
+TABLE.bordered{}
+TABLE.bordered TD{}
+TABLE.bordered TH{}
+
+
+textarea {resize:none}
+
+body,html {height:100%; min-height:100%; width:100%;}
+
+body {background: url(/i/bg2ex.jpg) no-repeat top center; height:5720px; position:relative; background-size:2560px 5780px ; overflow-x:hidden;}
+/*/////////////////*/
+
+
+@font-face {
+    font-family: 'pf_dintext_pro';
+    src: url('/css/fonts/pfdintextpro-regular-webfont.eot');
+    src: url('/css/fonts/pfdintextpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/css/fonts/pfdintextpro-regular-webfont.woff') format('woff'),
+    url('/css/fonts/pfdintextpro-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+@font-face {
+    font-family: 'PFDinTextProRegular';
+    src: url('/css/fonts/pfdintextpro-regular.eot');
+    src: url('/css/fonts/pfdintextpro-regular.eot') format('embedded-opentype'),
+    url('/css/fonts/pfdintextpro-regular.woff') format('woff'),
+    url('/css/fonts/pfdintextpro-regular.ttf') format('truetype'),
+    url('/css/fonts/pfdintextpro-regular.svg#PFDinTextProRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'PFDinTextProBold';
+    src: url('/css/fonts/pfdintextpro-bold.eot');
+    src: url('/css/fonts/pfdintextpro-bold.eot') format('embedded-opentype'),
+    url('/css/fonts/pfdintextpro-bold.woff') format('woff'),
+    url('/css/fonts/pfdintextpro-bold.ttf') format('truetype'),
+    url('/css/fonts/pfdintextpro-bold.svg#PFDinTextProBold') format('svg');
+}
+
+
+@font-face {
+    font-family: 'PFDinTextProLight';
+    src: url('/css/fonts/pfdintextpro-light.eot');
+    src: url('/css/fonts/pfdintextpro-light.eot') format('embedded-opentype'),
+    url('/css/fonts/pfdintextpro-light.woff') format('woff'),
+    url('/css/fonts/pfdintextpro-light.ttf') format('truetype'),
+    url('/css/fonts/pfdintextpro-light.svg#PFDinTextProLight') format('svg');
+}
+
+
+@font-face {
+    font-family: 'PFDinTextProMedium';
+    src: url('/css/fonts/pfdintextpro-medium.eot');
+    src: url('/css/fonts/pfdintextpro-medium.eot') format('embedded-opentype'),
+    url('/css/fonts/pfdintextpro-medium.woff') format('woff'),
+    url('/css/fonts/pfdintextpro-medium.ttf') format('truetype'),
+    url('/css/fonts/pfdintextpro-medium.svg#PFDinTextProMedium') format('svg');
+}
+
+#header {width:100%; height: 60px; background: #fff;
+    -moz-box-shadow: 0 1px 3px #ddd;
+    -webkit-box-shadow: 0 1px 3px #ddd;
+    box-shadow: 0 1px 3px #ddd;
+    position:fixed;
+    z-index: 999;
+    top:0;
+}
+
+#header > div {
+    width:auto;
+    margin:0 50px;
+    height:60px;
+    line-height:60px;
+}
+
+#header > div > table { height:60px; width:100%; font-family: "PFDinTextProMedium";}
+#header > div > table  td {/*border-left:1px solid #F2F2F2; */text-align: center; font-size:14px; text-transform: uppercase; line-height:60px; height:60px;}
+#header > div > table  td:last-child { text-align: right; width:145px;}
+#header > div > table  td:first-child{ text-align: right; width:145px;}
+#header > div > table  td:nth-last-child(2) {width:235px;}
+#header > div > table  td:nth-last-child(3) {width:235px; border:0;}
+#header > div > table  td:nth-last-child(3) div:hover {color:#F2393A; cursor:pointer;}
+#header > div > table  td:first-child {border:0; text-align: left; }
+#header > div > table a {color:#000; text-decoration: none;}
+#header > div > table a.dropdown:hover {color:#000;}
+#header > div > table a:hover {color:#F2393A;}
+
+#header > div > table  td:nth-child(2){ left:275px; position: fixed; border-left: 1px solid #F2F2F2; border-right:1px solid #F2F2F2;}
+
+
+
+
+#footer {width:100%; height: 56px; background: #343435; /*position:absolute;*/ bottom:0; }
+#footer > div {
+    width:auto;
+    margin:0 50px;
+    height:56px;
+    line-height:56px;
+}
+
+#footer > div > table { height:56px; width:100%; font-family: "PFDinTextProRegular";}
+#footer > div > table  td { text-align: center; font-size:14px; text-transform: uppercase; line-height:56px; height:56px;}
+#footer > div > table  td:last-child { text-align: right; width:205px; color:#ccc}
+#footer > div > table  td:last-child a {font-family: 'PFDinTextProMedium'; color:#fcfcfc}
+#footer > div > table  td:first-child { text-align: left; }
+#footer > div > table a {color:#000; text-decoration: none;}
+#footer > div > table a:hover {color:#F2393A}
+#footer > div > table td:first-child {text-align: left;}
+
+
+#nav {width:210px; height:225px; position:fixed; top:50%; margin-top:-112px; right:50px; }
+#nav .nav_block {height:19px; margin:22px 0 0; background: url(/i/nav.png) no-repeat 100% -38px;}
+#nav .nav_block:hover {background-position: 100% -19px; cursor: pointer;}
+#nav .nav_block:first-child {margin:0; }
+#nav .nav_block .block_name {display:none; color:#B7BEC1; text-align: right; padding:0 45px 0 0; font-size:14px;font-family: "PFDinTextProRegular"; }
+#nav .nav_block:hover .block_name {display:block; }
+#nav .active {background-position: 100% 0;}
+#nav .active:hover {cursor:default; background-position: 100% 0;}
+#nav .active .block_name {display:block}
+
+
+
+.block {width:980px; height:954px; position:relative; margin:0 auto}
+
+.button {width:160px; height:53px; background: url(/i/b1.jpg) no-repeat; cursor:pointer; }  
+.button2 {width:160px; height:53px; background: url(/i/b1.jpg) no-repeat; cursor:pointer; } 
+.button3 {width:160px; height:53px; background: url(/i/b1.jpg) no-repeat; cursor:pointer; } 
+.button4 {width:160px; height:53px; background: url(/i/b1.jpg) no-repeat; cursor:pointer; } 
+.button:active {background-position: 100% 0;}
+
+.consult_pages3   {
+    overflow: hidden;
+    text-align: center;
+    width:160px;                                                      /*  sales@gkshop.ru */
+    height:50px;
+    top:599px;
+    left:50%;
+    z-index:9;
+    margin-left:-83px;
+    text-transform: uppercase;
+    border:3px solid #f2393a;
+    border-radius:8px;
+    font-family: "PFDinTextProBold";
+    color:#f2393a;
+    line-height: 49px;
+    cursor: pointer;
+    margin-top:40px;
+    margin-left:1px;
+}
+
+
+/*//////слайд 1///////*/
+#b1 {height:895px; margin-top:60px }
+#b1 .i1 {width:177px; height:166px; position:absolute; right:0; bottom:31px;}
+#b1 .t1 {width:575px; height:330px; position:absolute; top:180px; right:6px;}
+#b1 .t1 .h1 {width:674px; height:82px;}
+#b1 .t1 .h2 {font-family: "PFDinTextProLight"; font-size:22px; margin:40px 0 0; width:100%; /*letter-spacing: 0.5px;*/}
+#b1 .t1 .h2 span:first-child {color:#000 !important; font-size:27px; margin:40px 0 0; width:100%; /*letter-spacing: 0.5px;*/}
+#b1 .t1 .h2 span {font-weight:bold}
+#b1 .t1 .h3 {color:#F2393A; font-size:36px; font-family: "PFDinTextProBold"; margin:10px 0 0}
+#b1 .button {margin:20px 0 0}
+#b1 .timer {width: 740px; height:55px;  position: absolute; left:0; bottom:140px;}
+#b1 .timer .desc {font-size:18px; font-family: "PFDinTextProRegular"; font-weight:bold; margin:8px 0 0 }
+#b1 .timer .sub_desc {font-size:14px; color:#848484; font-family: "PFDinTextProRegular"; margin: 7px 0 0; word-spacing: 1px;}
+#b1 .timer .sub_desc span {color:#F2393A}
+#b1 .timer .nums {width:115px; height:32px; position:absolute}
+#b1 .timer .nums .num {width:32px; height:32px; text-align: center; line-height: 30px; color:#000; font-family: 'Dosis'; font-weight:bold; font-size:24px }
+#b1 .timer .nums .num_name {position:absolute; font-family: "PFDinTextProRegular"; font-size:12px; left:41px; top:15px;}
+#b1 .timer .days {top:7px; left:254px;}
+#b1 .timer .hours {top:7px; left:372px;}
+#b1 .timer .minutes {top:7px; left:490px;}
+#b1 .timer .seconds {top:7px; left:608px;}
+/*//////////////////////////////*/
+
+
+
+/*///////слайд 2///////*/
+#b2 .t2 {width:548px; height:270px; position: absolute; top:220px; left :0;}
+#b2 .t2 .h1 {width:548px; height:82px; margin:0 0 50px}
+
+#b2 .t2 .list {width:100%; height:40px; line-height:40px;margin:0 0 8px; font-family: "PFDinTextProLight"; color: #404040; font-size:18px}
+#b2 .t2 .list > .list_circle {width:40px; height:40px; float:left; background: url(/i/circle.png); font-family:"PFDinTextProMedium"; text-align: center; font-size:18px; margin: 0 20px 0 0; color:#000}
+#b2 .t2 .list:last-child {margin:0}
+.pluses {width:738px;  position:absolute; top:568px; left:0; }
+.pluses_title {width:246px; height:40px; float:left;}
+.pluses_list {width:410px; float:right; margin:14px 0 0; font-size:16px;  font-family: "PFDinTextProLight"; color:#5c5c5c}
+.pluses_list > ul > li {margin:0 0 20px;  padding: 0 0 0 20px; list-style: none; background: url(/i/list_img.jpg) no-repeat 0 8px;}
+.pluses_list > ul > li > b {color:#000}
+/*//////////////////////////*/
+
+
+
+/*///////слайд 3 ////////////*/
+.ox {width:348px; height:197px; left:406px; top:211px;  position: absolute;}
+.slogan {width:100%; position:absolute;  font-size:30px; text-align: center; font-family: "PFDinTextProLight";}
+.slogan > span {font-size: 24px; font-family:"PFDinTextProMedium";}
+.slogan > span > span {font-family: "PFDinTextProBold";}
+#b3 .slogan {top:460px;}
+#b3 .order {width:570px; height:53px; line-height:53px; position:absolute; right:0; top:644px; font-family: "PFDinTextProBold"; font-size:16px; text-transform: uppercase; color:#f2393a}
+#b3 .button2 {float:left; margin:0 20px 0 0;}
+/*/////////////////////////*/
+
+
+/*///////слайд 4//////////*/
+#b4 .h4 {width:572px; height:82px; position:absolute; top:221px; right:3px;}
+#b4 .problems {width:576px; position:absolute; right:0; top: 351px; }
+#b4 .problems ul {display:block}
+#b4 .problems ul li {list-style: none; font-size:16px; font-family: "PFDinTextProLight"; margin:0 0 15px 0; color:#5c5c5c}
+#b4 .problems ul li span {font-family:"PFDinTextProMedium"; color:#000}
+#b4 .problems ul li:last-child {margin:0}
+#b4 .problems .dash {width:25px; height:3px; background: #ff2a32; margin:30px 0 0}
+#b4 .problems .and_others {margin:25px 0 0; font-size:14px; text-transform: uppercase; font-family: "PFDinTextProBold";}
+/*////////////////////////////*/
+
+
+
+
+/*////////слайд 5////////////*/
+#b5 .leps {width:180px; height:199px; position: absolute; left:392px; top:214px;}
+#b5 .slogan {top:465px;}
+#b5 .order {width:570px; height:53px; line-height:53px; position:absolute; right:0; top:644px; font-family: "PFDinTextProBold"; font-size:16px; text-transform: uppercase; color:#f2393a;}
+#b5 .button3 {float:left; margin:0 20px 0 0;}
+/*/////////////////////////////*/
+
+
+
+
+
+/*///////слайд 6///////////*/
+#b6 .how_we_work {width:285px; height:40px; left:0; top:140px; position:absolute}
+#b6 .icons_block {width:978px; height:330px; position: absolute; top:286px; left:0;}
+#b6 .icons_block .icons {width:100%; height:116px;}
+#b6 .icons_block .icons .icon {width:107px; height:120px; float:left; margin:0 16px 0 0; /*background: #000;*/ overflow:visible; position: relative;}
+#b6 .icons_block .icons .icon:last-child {margin:0}
+
+.icon {
+    background: url(/i/icons/border.png) no-repeat center;
+}
+.icon:hover {
+    background: url(/i/icons/border_active.png) no-repeat center;
+    cursor:pointer
+}
+
+.icon_div {
+    width:66px;
+    height:47px;
+    background-position: 0 0;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-24px 0 0 -33px;  
+}
+
+.icon:hover .icon_div {
+    background-position: 0 -47px; 
+} 
+
+.arrow-bottom { position:absolute; left:83px; bottom:0 }
+.arrow-top { position:absolute; left:83px; top:0 }
+
+.icon_img {margin:0 auto; display: block; max-width: 107px; max-height: 120px;}
+#b6 .icons_block .icons .icon:hover {/*background: #f2393a;*/}
+#b6 .icons_block .icons .icon:hover .icon_name {color:#f2393a; }
+#b6 .icons_block .icons .icon .icon_name {position:absolute; top: 132px; font-family: "PFDinTextProLight"; font-size:15px; text-align: center; width:100%;}
+#b6 .icons_block .dash {width:25px; height:3px; background: #ff2a32; margin:80px auto 0}
+#b6 .icons_block .icon_desc  {font-family: "PFDinTextProRegular"; font-size:24px; text-transform: uppercase; width:100%; margin: 30px auto 0; text-align: center; display:none}
+#b6 .icons_block .icon_desc span {font-family: "PFDinTextProBold";}
+#b6 .bomb_text {font-family: "PFDinTextProBold"; font-size:16px; width:64px; height:16px; text-align: center; position: absolute; bottom:22px; left:458px; color:#fff;}
+#b6 .attention {width:500px; height:14px; position:absolute; bottom:25px; right:-80px; font-family: "PFDinTextProRegular"; text-transform: uppercase;}
+#b6 .attention span {font-family: "PFDinTextProBold"; color:#F2393A}
+/*//////////////////////*/
+
+
+/*////////всплывающие окна////////////*/
+
+.popup {width:980px; top:90px; left:50%; position:fixed; margin:0 0 0 -490px; background: #fff; z-index:99; border-radius:5px; display:none;
+    -moz-box-shadow: 0 0 22px #000000;
+    -webkit-box-shadow: 0 0 22px #000000;
+    box-shadow: 0 0 22px #000000;
+}
+.popup_content {width:920px; margin:30px auto; overflow:hidden; position:relative;}
+.popud_head {font-size:24px; font-family: "PFDinTextProLight"; }
+.popud_head span {font-family:"PFDinTextProMedium";}
+.popup_close {width:18px; height:18px; position:absolute; right:30px; top:35px; background: url(/i/close.jpg) no-repeat; cursor:pointer; z-index: 100;}
+.popup_desc {position:absolute; right:30px; bottom:30px; font-size:14px; font-family: "PFDinTextProLight"; color:#848484}
+.popup_desc > span {color:#F2393A}
+.popup_hr {width:100%; height:1px; background: #E9E9E9; margin:30px 0 0}
+.popup_fields {width:100%; margin:25px 0 38px}
+.popup_fields td {height:60px;}
+.popup_fields tr > td:first-child {width:220px; font-family: "PFDinTextProRegular"; font-size: 16px;}
+.popup_fields tr > td:first-child span {color:#F2393A}
+.popup_fields tr > td:last-child > div {width:698px; height:48px; border:1px solid #E6E6E6; border-radius: 5px}
+.popup_fields tr > td:last-child > div > input {width:655px; height:48px; line-height: 48px; margin:0 auto; border:0; display:block; font-family: arial; font-size:14px;}
+.popup_fields tr > td:last-child > div.good, .popup_fields tr > td:last-child > div > input.good {background: #f5f5f5; color:#808080}
+.popup_fields tr > td:last-child > div.nogood, .popup_fields tr > td:last-child > div > input.nogood {background: #ffeeee; color:#f2393a}
+.popup_fields tr:last-child td {height:160px;}
+.popup_fields tr:last-child td:first-child {vertical-align:top; line-height: 55px;}
+.popup_fields tr:last-child td:last-child > div  {height:148px; }
+.popup_fields tr:last-child td:last-child > div > textarea {width:655px; height:110px ; margin:15px auto 0; display:block; border:0; font-size:14px; font-family: arial;}
+.success {font-size:24px; font-family: "PFDinTextProLight"; color: #4CB848; text-align: center; margin:100px 0 20px}
+
+
+#p9 {width:700px; margin:0 0 0 -350px}
+#p9 .popup_content {width:100%}
+#p9 .button {margin:0 auto 100px; background-image: url(/i/b2.jpg);}
+
+#form0 .button {background-image: url(/i/b3.jpg)}
+
+
+.consult-new{
+    overflow: hidden;
+    text-align: center;
+    width:160px;                                                      /*  sales@gkshop.ru */
+    height:50px;
+    position:absolute;
+    top:720px;
+    left:50%;
+    z-index:9;
+    margin-left:-83px;
+    text-transform: uppercase;
+    border:3px solid #000;
+    border-radius:8px;
+    font-family: "PFDinTextProBold";
+    color:#000000;
+    line-height: 49px;
+}
+.consult{
+    overflow: hidden;
+    text-align: center;
+    width:160px;                                                      /*  sales@gkshop.ru */
+    height:50px;
+    position:absolute;
+    top:599px;
+    left:50%;
+    z-index:9;
+    margin-left:-83px;
+    text-transform: uppercase;
+    border:3px solid #000;
+    border-radius:8px;
+    font-family: "PFDinTextProBold";
+    color:#000000;
+    line-height: 49px;
+}
+
+.consult_img {
+    position:absolute;
+    top:607px;
+    /*left:579px;*/
+    left:75%;
+    margin-left: -156px;
+}
+.consult_img-new {
+    position:absolute;
+    top:728px;
+    /*left:579px;*/
+    left:75%;
+    margin-left: -156px;
+}
+
+.cons_title {
+    overflow: hidden;
+    text-align: center;
+    top:795px;
+    z-index:9;
+    text-transform: uppercase;
+    font-family: "PFDinTextProMedium";
+    color:#999999;
+    width:auto;
+    border-bottom:1px dotted; 
+    font-size:16px;
+    cursor:pointer;
+
+}
+
+.cons_desc {
+    overflow: hidden;
+    text-align: center;
+    top:701px;
+    z-index:8;
+    text-transform: uppercase;
+    font-family: "PFDinTextProMedium";
+    width:auto;
+    font-size:15px;
+    cursor:pointer;
+}
+
+.cons_titles {
+    color:#999999;
+    border-bottom:1px dotted #999999;
+    margin:5px auto 0;
+    width:auto;
+    display:inline-block;
+}
+
+.cons_titles:first-child {
+    margin-top:0;
+}
+
+.cons_titles:hover {
+    color:#f2393a;
+    border-bottom:1px dotted #f2393a;
+
+}
+
+
+.cons_desc2 {
+    overflow: hidden;
+    text-align: center;
+    top:730px;
+    z-index:8;
+    text-transform: uppercase;
+    font-family: "PFDinTextProMedium";
+    width:auto;
+    font-size:15px;
+    cursor:pointer;
+}
+
+.action{
+    width:100%;
+    position:absolute;
+    /*background: url(/i/main_action.jpg) no-repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+    bottom: 50px;
+    left:0;
+    height:67px;
+}
+/**/
+
+
+/*форма*/
+#new_form_div {
+    position: relative;
+    top:45%;
+    left:41%;
+}
+
+table.offer{
+    width:569px;
+    height:269px;
+    position:relative; 
+    left:8px;
+    top:7px; 
+}
+
+table.offer div{
+    text-align:justify;
+    margin:0 30px 0 0;
+}
+
+table.offer tr:nth-child(1) td{
+    height:70px;
+    font-family: 'PFDinTextProMedium';
+    font-size:26px;
+    color:rgb(151, 123, 99);  
+}
+table.offer tr:nth-child(1) td:nth-child(1) div{
+    margin-left: 30px;
+}
+
+
+table.offer tr:nth-child(1) td:nth-child(2) div{
+    border:1px dashed rgb(242, 57, 58);
+    border-radius:2px;
+    padding:5px 40px;
+    text-align: center;
+    color:rgb(242, 57, 58);
+}
+
+
+table.offer tr:nth-child(1) td:nth-child(2){
+    color:rgb(242, 57, 58);
+}
+
+table.offer tr:nth-child(1) td span.bold{
+    font-family: 'PFDinTextProBold';
+    vertical-align: center ;
+}
+
+table.offer tr:nth-child(1) td:nth-child(2){
+    width:50%;
+}
+
+table.offer tr:nth-child(2) td {
+    height:50px;
+}
+
+table.offer tr:nth-child(2) td input{
+    height: 49px;
+    width:99%;
+    border:1px solid rgb(170, 150, 125);
+    border-radius:4px;
+    padding-left:20px;
+    font: normal 17px "PFDinTextProLight";
+}
+table.offer tr td input:focus{
+    font-family:normal 17px "PFDinTextProLight";     
+
+}
+
+
+.input_foc::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 1s ease;}
+.input_foc::-moz-placeholder                {text-indent: 0px;   transition: text-indent 1s ease;}
+.input_foc:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 1s ease;}
+.input_foc:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 1s ease;}
+.input_foc:focus::-webkit-input-placeholder {text-indent: 500px; transition: text-indent 1s ease;}
+.input_foc:focus::-moz-placeholder          {text-indent: 500px; transition: text-indent 1s ease;}
+.input_foc:focus:-moz-placeholder           {text-indent: 500px; transition: text-indent 1s ease;}
+.input_foc:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-indent 1s ease;}
+
+
+
+
+table.offer tr:nth-child(2) td input.nogood{
+    border: 2px solid #f35353;
+} 
+
+
+table.offer tr:nth-child(3) td input.nogood{
+    border: 2px solid #f35353;
+}
+
+table.offer tr:nth-child(3) td{
+    height: 50px; 
+}
+table.offer tr:nth-child(3) td:nth-child(2){
+    width:50%;
+}
+table.offer tr:nth-child(3) td input{
+    height: 49px;
+    width:99%;
+    border:1px solid rgb(170, 150, 125);
+    border-radius:4px;
+    padding-left:20px;
+    font: normal 17px "PFDinTextProLight";
+}
+
+
+}
+
+table.offer tr:nth-child(1) td:nth-child(1) div{
+    margin-left:30px;
+}
+
+
+
+
+table.offer tr:nth-child(2) td div {   
+    margin:-30px 45px -30px 30px;
+}
+table.offer tr:nth-child(3) td:nth-child(1) div {   
+    margin:-40px 30px; 
+}
+
+table.offer tr:nth-child(3) td:nth-child(2)  div.knopka {
+    color: #fff; 
+    text-decoration: none; 
+    user-select: none; 
+    background: rgb(242, 57, 58); 
+    padding: 1.3em 1.5em; 
+    outline: none;                                                                                                                              
+    margin-top: -30px;
+    border-radius:4px;
+    text-align: center;  
+}
+table.offer tr:nth-child(3) td:nth-child(2)  div.knopka:hover{
+    cursor:pointer;
+}
+
+
+
+/* menu*/
+nav{ 
+    text-transform: none;
+    box-shadow:none;
+    text-shadow:none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+
+} 
+nav li { 
+    display: inline-block; 
+    margin: 0; 
+    padding: 0; 
+    position: relative; 
+    width: 370px; 
+} 
+
+#header > div> table nav ul li a:hover { 
+    color:black; 
+} 
+
+
+nav li a { 
+    background: inherit; 
+    color: #848484 !important; 
+    display: block; 
+    font: normal 14px/60px "PFDinTextProLight"; 
+    padding: 0 25px; 
+    text-align: left; 
+    text-decoration: none; 
+    border-bottom: 1px solid #F2F2F2; 
+
+} 
+nav li:hover a { 
+    background: none; 
+} 
+nav li ul{ 
+    left: 0; 
+    opacity: 0; 
+    position: absolute; 
+    top: 2px; 
+    visibility: hidden; 
+} 
+nav li:hover ul { 
+    opacity: 1; 
+    top: 100%; 
+    visibility: visible; 
+    background-color: white; 
+} 
+nav li ul li { 
+    width: 100%; 
+} 
+nav li ul a:hover { 
+    text-decoration: none; 
+    background: inherit; 
+    border-left: 5px solid red; 
+    padding-left: 20px; 
+
+} 
+
+nav .dropdown:hover, nav ul li a:hover{ 
+    font-family: "PFDinTextProLight";
+    color:black !important;   
+} 
+
+.dropdown:focus ~ .sub-menu, 
+.dropdown:active ~ .sub-menu, 
+.sub-menu:hover 
+{ 
+    display: block; 
+} 
+.sub-menu{ 
+    display: none; 
+} 
+
+#header > div> table nav { 
+    background-image: url(/i/123.PNG); 
+}
+#b2 .pluses .button-detail{
+    font-family: "PFDinTextProBold";
+    font-size: 14px;
+    line-height: 50px;
+    height:50px;
+    width: 160px;
+    border: 2px solid #000;
+    border-radius:5px;
+    text-align: center;
+    background-color: #fff;
+    text-transform: uppercase;
+    position:absolute;
+    top: 280px;
+    right: 228px;
+    color:black !important;
+}
+#b4 .problems .button-detail{
+    font-family: "PFDinTextProBold";
+    font-size: 14px;
+    line-height: 50px;
+    height:50px;
+    width: 160px;
+    border: 2px solid #000;
+    border-radius:5px;
+    text-align: center;
+    background-color: #fff;
+    text-transform: uppercase;
+    position:absolute;
+    top: 370px;
+    right: 410px;
+    color:black !important;
+}
+.consult-new-button{
+    text-align: center;
+    width:260px;                                                      /*  sales@gkshop.ru */
+    height:53px;
+    position:absolute;
+    top: 755px;
+    left: 360px;
+    text-transform: uppercase;
+    font-family: "PFDinTextProBold";
+    font-size: 14px;
+    color:#fff;
+    line-height: 53px;
+    z-index:9;
+    background: url("/i/consult-button.png");
+    cursor: pointer;
+
+}
+.consult-new-button:active{
+    background: #f2393a !important;
+    border-radius:5px;
+    height:50px;
+    top: 758px;
+    line-height:50px;
+    cursor: pointer;
+}
+.dropdown{
+    outline:none;
+}
+.successMsg{
+    margin: 0px auto;
+    text-align: center;
+    font-family: "PFDinTextProRegular";
+    font-size: 20px;
+    color: green;
+}
