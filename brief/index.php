@@ -1,13 +1,14 @@
 <?
     require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("keywords", "интеграция 1с-битрикс и 1с, интеграция 1с и 1с-битрикс, интеграция 1с,  интеграция 1с-битрикс, интеграция сайта");
+$APPLICATION->SetPageProperty("description", "Заполните бриф для получения консультации по интеграции 1С и 1С-Битрикс");
     $APPLICATION->SetTitle("Бриф");
     $APPLICATION->SetPageProperty("page_title_top", "Бриф");
-    //$APPLICATION->SetPageProperty("page_title", "Бриф");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:iblock.element.add.form", 
-	"brief", 
+	"brief_new", 
 	array(
-		"COMPONENT_TEMPLATE" => "brief",
+		"COMPONENT_TEMPLATE" => "brief_new",
 		"CUSTOM_TITLE_DATE_ACTIVE_FROM" => "",
 		"CUSTOM_TITLE_DATE_ACTIVE_TO" => "",
 		"CUSTOM_TITLE_DETAIL_PICTURE" => "",
@@ -21,6 +22,11 @@
 		"DETAIL_TEXT_USE_HTML_EDITOR" => "N",
 		"ELEMENT_ASSOC" => "CREATED_BY",
 		"GROUPS" => array(
+			0 => "1",
+			1 => "2",
+			2 => "3",
+			3 => "4",
+			4 => "5",
 		),
 		"IBLOCK_ID" => "12",
 		"IBLOCK_TYPE" => "gkexchange",
@@ -81,7 +87,7 @@
 		"SEF_MODE" => "N",
 		"STATUS" => "ANY",
 		"STATUS_NEW" => "N",
-		"USER_MESSAGE_ADD" => "",
+		"USER_MESSAGE_ADD" => "Бриф успешно отправлен!",
 		"USER_MESSAGE_EDIT" => "",
 		"USE_CAPTCHA" => "N"
 	),

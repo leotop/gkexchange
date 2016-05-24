@@ -1,0 +1,79 @@
+.wrap .obr{
+    margin:0;
+}
+.wrap .content{
+    margin: 0 auto 0;  
+    float:none;
+}
+.wrap .menu{
+    display:none;
+}
+.content > h1{
+    display:none;
+}
+#header > div > table td:first-child{
+    left: -20px;
+    position: relative;
+}
+#brief table.data-table{
+    border-bottom:none;
+    border-top:none;
+}
+#brief textarea{
+    width: 300px;
+    height: 100px;
+    display: block;
+    border: 0px none;
+    font-size: 14px;
+    font-family: arial;
+    margin:10px;
+    font-family: "PFDinTextProRegular";
+    font-size: 16px;
+}
+#brief .text{
+    border: 1px solid #E6E6E6;
+    border-radius: 5px;
+}
+#brief .fieldName{
+    font-family: "PFDinTextProRegular";
+    font-size: 16px;
+}
+#brief td{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    vertical-align: middle;
+}
+#brief input[type="radio"]{
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+}
+#brief td label{
+    margin-right: 10px;
+    font-family: "PFDinTextProRegular";
+}
+#brief #num_18,
+#brief #num_20,
+#brief #num_18,
+#brief #num_51,
+#brief #num_52,
+#brief #num_53,
+#brief #num_54,
+#brief #num_55,
+#brief #num_NAME
+{
+    height: 20px; 
+}
+#brief tr{
+    border-bottom: 1px solid #F0F0F0;
+}
+#brief .blockTitle{
+    border-bottom: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: block;
+}
+#brief .blockTitle p{
+    color:#000;
+    font-size: 20px;
+}

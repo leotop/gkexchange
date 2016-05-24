@@ -1,0 +1,141 @@
+div.news-list
+{
+    word-wrap: break-word;
+}
+div.news-list img.preview_picture
+{
+    float:left;
+    margin:0 4px 6px 0;
+}
+.news-date-time {
+    color:#486DAA;
+}
+
+.portfolio_wrapper {
+    padding:38px 0 20px;
+}
+
+.portfolio-item-line {
+    overflow: hidden;
+    display: flex;
+    padding:0 0 30px;
+}  
+
+.portfolio-item {
+    align-self: stretch;
+    border: 1px solid #cdcdcd;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 0 0 193px;
+    position: relative;
+    width: 328px;
+}
+
+.portfolio-item:hover {
+    box-shadow: 0px 2px 4px #cbcbcb;
+} 
+
+.portfolio-item:nth-child(2n+1) {
+    margin:0 38px 0 0;
+} 
+
+.portfolio-item-img-container {
+    width:100%;
+    height:116px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    margin: 35px 0 0;
+}
+
+.portfolio-item-img-container a {       
+    width:103px;
+    height:116px;
+    margin:0 auto;
+    display: block;
+}
+
+.portfolio-item-img-container img {
+    margin:0 auto !important;
+}
+
+.portfolio-item-site {
+    width:100%;
+    margin: 20px 0 0;
+    font-size: 24px;
+    text-align: center;
+    font-family: "PragmaticaMedium";
+    color:#252525;
+}
+
+.portfolio-item-project {
+    width:100%;
+    margin: 12px 0 0;
+    font-size: 17px;
+    text-align: center;
+    font-family: "PragmaticaLight";
+    color:#8e786a;
+}
+
+.portfolio-item-tag-container {
+    width:100%;
+    text-align: center;
+    overflow: hidden;
+    margin:20px 0 0;
+}
+
+.portfolio-item-tag {
+    border: 1px solid #c1c1c1;
+    border-radius: 11px;
+    color: #838383;
+    display: inline-block;
+    font-family: "PragmaticaMedium";
+    font-size: 13px;
+    height: 18px;
+    line-height: 18px;
+    margin: 0 2px 7px;
+    padding: 0 12px 2px;
+}
+
+.portfolio-item-price {
+    width:100%;
+    color:#ef3421;
+    font-size: 30px;
+    text-align: center;
+    font-family: "PragmaticaMedium";  
+    height:32px;
+    position: absolute;
+    bottom:145px;
+}
+
+.portfolio-bottom-line {
+    width:100%;
+    height:1px;
+    background: #cdcdcd;
+    bottom:110px;
+    position: absolute;
+}
+
+.portfolio-item-bottom {
+    display:block;
+    width:178px;
+    height:46px;
+    border:2px solid #dadada;
+    margin:0 auto;
+    line-height: 46px;
+    text-align: center;
+    font-size:16px;
+    font-family: "PragmaticaBookRegular";
+    border-radius:25px;
+    color:#656565;
+    text-decoration: none;
+    position: absolute;
+    bottom:30px;
+    left:0;
+    right:0;
+}
+
+.portfolio-item:hover .portfolio-item-bottom {
+    border-color:#ef3928;
+    color:#ef3928;
+}
