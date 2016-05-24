@@ -1,0 +1,27 @@
+.nav_chain_container {
+    margin:63px 0 0;
+    font-family: "PragmaticaBookRegular";
+    font-size:15px;
+}
+
+.nav_chain_container a {
+    color:#252525;
+    text-decoration: none;
+    border-bottom:1px solid #dadada;
+    padding:0 0 2px;
+}
+
+.nav-arrow {
+    width:8px;
+    height:12px;
+    margin:0 8px -2px;
+    display: inline-block; 
+}
+
+.arrow-right {
+    background: url(img/arrow-right.jpg) no-repeat top center;    
+}
+
+.arrow-down {
+    background: url(img/arrow-down.jpg) no-repeat top center;    
+}

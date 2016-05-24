@@ -1,0 +1,46 @@
+::-webkit-input-placeholder {color:#000;}
+::-moz-placeholder          {color:#000;}/* Firefox 19+ */
+:-moz-placeholder           {color:#000;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#000;}
+input:focus,textarea:focus, .nogood input, .nogood textarea {
+  border-color: #ef3421 !important;
+  border-width: 2px !important;
+  box-shadow: 0 8px 10px 3px #f3d4d1 !important;
+  color: #ef3421 !important;
+}
+input:focus ::-webkit-input-placeholder,textarea:focus ::-webkit-input-placeholder, .nogood ::-webkit-input-placeholder {
+  color: #ff0000;
+}
+input:focus ::-moz-placeholder,textarea:focus ::-moz-placeholder,.nogood ::-moz-placeholder          { color: #ff0000;}/* Firefox 19+ */
+input:focus :-moz-placeholder,textarea:focus :-moz-placeholder,.nogood :-moz-placeholder           { color: #ff0000;}/* Firefox 18- */
+input:focus :-ms-input-placeholder,textarea:focus :-ms-input-placeholder,.nogood :-ms-input-placeholder      { color: #ff0000;}
+
+.rubznak {
+  font-family: ALSRubl;
+}
+.radio {
+  display: none;
+
+}
+.radio-group {
+  display: block;
+  float: left;
+  width: 310px;
+}
+.radio + label {
+  display: inline-block;
+  font: 15px/21px 'PragmaticaBookRegular', sans-serif;
+  background: url(../img/radio.png) no-repeat 0 0;
+  height: 21px;
+  margin: 0 35px 10px 0;
+  padding: 0 0 0 35px;
+  cursor: pointer;
+}
+.radio + label:last-child {
+  margin-right: 0;
+}
+
+.radio:checked + label  {
+  background-position: 0 100%;
+  color: #ef3e21;
+}
