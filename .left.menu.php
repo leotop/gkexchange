@@ -22,20 +22,6 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Портфолио", 
-		"/portfolio/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Процесс", 
-		"/process/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"Контакты", 
 		"/contacts/", 
 		Array(), 

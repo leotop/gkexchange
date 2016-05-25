@@ -20,6 +20,9 @@
 
 </head>
 <body> 
+
+<?include($_SERVER["DOCUMENT_ROOT"]."/local/templates/.default/include/stat.php");?>
+
 <?$APPLICATION->ShowPanel()?>
 <!--wrapper-->
 <div class="wrapper">
