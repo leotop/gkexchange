@@ -24,8 +24,8 @@
  <p class="brief_load_success"><?=GetMessage("BRIEF_FILE_LOAD_SUCCESS")?></p>
 <?}?>
 
-<a href="/upload/brief.doc" class="button4"><?=GetMessage("DOWNLOAD_BRIEF")?></a>     
-<a href="#!" onclick="show_popup(2)" class="button5" title="<?=GetMessage("LOAD_BRIEF")?>"><?=GetMessage("IBLOCK_FORM_SUBMIT")?></a>
+<a href="/upload/brief.doc" class="button4" onclick="$(this).parent().submit();yaCounter23705659.reachGoal('ORDER3'); return true;"><?=GetMessage("DOWNLOAD_BRIEF")?></a>     
+<a href="#!" onclick="show_popup(2)" onclick="$(this).parent().submit();yaCounter23705659.reachGoal('ORDER5'); return true;" class="button5" title="<?=GetMessage("LOAD_BRIEF")?>"><?=GetMessage("IBLOCK_FORM_SUBMIT")?></a>
 
 <?if (!empty($arResult["ERRORS"])):?>
     <?ShowError(implode("<br />", $arResult["ERRORS"]))?>
@@ -275,7 +275,7 @@
         <div class="bottom">
             <span class="text"><?=GetMessage("WARNING")?></span>   
             <button type="reset" class="button7"><?=GetMessage("CLEAR")?></button>
-            <input type="submit" class="button8" name="iblock_submit" value="<?=GetMessage("SEND")?>">
+            <input type="submit" class="button8" onclick="$(this).parent().submit();yaCounter23705659.reachGoal('ORDER4'); return true;" name="iblock_submit" value="<?=GetMessage("SEND")?>">
         </div> 
 
         <?=bitrix_sessid_post()?>

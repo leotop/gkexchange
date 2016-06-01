@@ -70,7 +70,7 @@
         <label><input autocomplete="off" type="text" class="input req email" name="EMAIL" placeholder="<?=GetMessage("EMAIL")?>" value=""/></label>
         <label><input autocomplete="off" type="text" class="input req" name="PHONE" placeholder="<?=GetMessage("PHONE")?>" value=""/></label>
         <input type="hidden" name="IBLOCK_ID" value="10"/>
-        <button type="submit" class="button">
+        <button type="submit" class="button" onclick="$(this).parent().submit();yaCounter23705659.reachGoal('ORDER1'); return true;">
             <?=GetMessage("SEND_FORM")?>
         </button>                 
     </form>
@@ -189,7 +189,7 @@
     <div class="figure4"></div>
     <div class="line"></div>
 
-    <div class="button2" onclick="show_popup(1)"><?=GetMessage("ORDER_CONSULTATION")?></div>
+    <div class="button2" onclick="show_popup(1)" onclick="$(this).parent().submit();yaCounter23705659.reachGoal('ORDER2'); return true;"><?=GetMessage("ORDER_CONSULTATION")?></div>
     <div class="next-block"></div>
 
 </div>
@@ -226,7 +226,7 @@
     <div class="figure4"></div>
     <div class="line"></div>
 
-    <div class="button2" onclick="show_popup(1)"><?=GetMessage("ORDER_CONSULTATION")?></div>
+    <div class="button2" onclick="show_popup(1)" onclick="$(this).parent().submit();yaCounter23705659.reachGoal('ORDER2'); return true;"><?=GetMessage("ORDER_CONSULTATION")?></div>
     <div class="next-block"></div>
 
 </div>
@@ -311,7 +311,7 @@
         );?>
 
     <div class="line"></div>
-    <div class="button3" onclick="show_popup(1)">
+    <div class="button3" onclick="show_popup(1)" onclick="$(this).parent().submit();yaCounter23705659.reachGoal('ORDER2'); return true;">
         <?=GetMessage("ORDER_CONSULTATION")?>
     </div>
     <div class="next-block" onclick="main_scroll(1)"></div>
