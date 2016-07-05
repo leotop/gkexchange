@@ -1,4 +1,4 @@
-<?
+<?  
     CModule::IncludeModule('iblock');
 
     define("INDEX_PAGE_CONTENT_IBLOCK", 8); //инфоблок с контентом для главной страницы
