@@ -6,7 +6,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5FFL36');</script>
-<!-- End Google Tag Manager --> 
+<!-- End Google Tag Manager -->
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -33,7 +33,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         if (w.opera == "[object Opera]") {
             d.addEventListener("DOMContentLoaded", f, false);
         } else { f(); }
+
     })(document, window, "yandex_metrika_callbacks");
+
+   /* window.onload = function() {
+        console.log(yaCounter23705659.getClientID());
+    } */
+
 </script>
 
 <!-- /Yandex.Metrika counter -->

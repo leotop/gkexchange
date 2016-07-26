@@ -49,9 +49,8 @@ $APPLICATION->SetTitle("Портфолио");
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"LIST_FIELD_CODE" => array(
-			0 => "",
-			1 => "TAGS",
-			2 => "",
+			0 => "TAGS",
+			1 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
 			0 => "PROJECT_NAME",
@@ -62,7 +61,7 @@ $APPLICATION->SetTitle("Портфолио");
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
-		"NEWS_COUNT" => "10",
+		"NEWS_COUNT" => "20",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",

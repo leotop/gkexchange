@@ -1,9 +1,10 @@
 <!--form-->
+
 <div class="forma popup" id="p1">
     <div class="close"></div>
     <div class="h1">
         <?=GetMessage("ORDER_FORM")?>
-    </div>       
+    </div>
 
     <form method="post" id="form" class="order_form">
         <label><input autocomplete="off" type="text" class="input req" name="NAME" placeholder="<?=GetMessage("YOUR_NAME")?>" value=""/></label>
@@ -17,8 +18,8 @@
 </div>
 <!--END form-->
 
-<!-- BEGIN JIVOSITE CODE {literal} --> 
-<script type='text/javascript'> 
-(function(){ var widget_id = 'OZSv3jgC1G'; 
-var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script> 
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+(function(){ var widget_id = 'OZSv3jgC1G';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
 <!-- {/literal} END JIVOSITE CODE -->
