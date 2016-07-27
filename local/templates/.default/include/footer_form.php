@@ -13,7 +13,7 @@
         <label><input autocomplete="off" type="text" class="input req" name="PHONE" placeholder="<?=GetMessage("PHONE")?>" value=""/></label>
         <label><textarea class="textarea req" name="TEXT" placeholder="<?=GetMessage("TEXT")?>"></textarea></label>
         <input type="hidden" name="IBLOCK_ID" value="7"/>
-        <button type="submit" class="button button9" onclick="$(this).parent().submit();yaCounter23705659.reachGoal('ORDER21'); return true;"><?=GetMessage("SEND_FORM")?></button>
+        <button type="submit" class="button button9" onclick="yaCounter23705659.reachGoal('ORDER21'); return true;"><?=GetMessage("SEND_FORM")?></button>
     </form>
 </div>
 <!--END form-->

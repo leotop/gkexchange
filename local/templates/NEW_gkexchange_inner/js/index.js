@@ -69,7 +69,8 @@ $(function () {
                     TEXT: form.find("textarea[name='TEXT']").val(),
                     IBLOCK_ID : form.find("input[name='IBLOCK_ID']").val(),
                     BRIEF_FILE : form.find("input[name='BRIEF_FILE']").val()
-                    }, function(data){  
+                    }, function(data){
+                    	data = data.trim();
                         if (data == "OK") {    
                             alert("Ваша заявка принята!");  
                             form.find("input[type=text], textarea").val("");     
