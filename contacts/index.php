@@ -6,7 +6,7 @@ $APPLICATION->SetPageProperty("description", "Интеграция 1С и 1С-Битрикс – наш п
 ?>
     
     
-<div class="contacts_wrapper">
+<div class="contacts_wrapper js_page_with_map">
     <div class="contacts_line">
         <div class="contacts_type">Телефон</div>
         <div class="contacts_value">+7 (495) 215-16-53</div>

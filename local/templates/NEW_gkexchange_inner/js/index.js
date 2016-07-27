@@ -184,52 +184,53 @@ var st;
 
 
 function initialize() {
-    //адреса
-    var coords = [{lat: 55.7508731, lng: 37.6532301, disabled: 0}];
-
-    var center = {lat: 55.7508731, lng: 37.6532301};
-
-    //карта с настройками
-    var zoom = 16;
-    var map = new google.maps.Map(document.getElementById('map'), {
-        scrollwheel: false,
-        zoom: zoom,
-        disableDefaultUI: true,
-        center: center
-    });
-
-
-
-    //маркеры
-    var i = 0;
-    for (i = 0; i < coords.length; i++) {
-        markers[i] = addMarker(coords[i], map, i);
-        if (openedMarker && openedMarker.ind == i) {
-            openedMarker = markers[i];
-            openedMarker.setIcon("../i/point.png");
-        }
-    }    
-
-    //зоом +
-    $("#map-zoom-plus").off("click").on("click", function () {
-        var currentZoomLevel = zoom;
-        if (currentZoomLevel != 21) {
-            zoom = currentZoomLevel + 1;
-
-        }
-        map.setZoom(zoom);
-
-    });
-
-    //зоом -
-    $("#map-zoom-minus").off("click").on("click", function () {
-        var currentZoomLevel = zoom;
-        if (currentZoomLevel != 0) {
-            zoom = currentZoomLevel - 1;
-        }
-        map.setZoom(zoom);
-    });
-
+	if ($(".js_page_with_map").length) {
+	    //адреса
+	    var coords = [{lat: 55.7508731, lng: 37.6532301, disabled: 0}];
+	
+	    var center = {lat: 55.7508731, lng: 37.6532301};
+	
+	    //карта с настройками
+	    var zoom = 16;
+	    var map = new google.maps.Map(document.getElementById('map'), {
+	        scrollwheel: false,
+	        zoom: zoom,
+	        disableDefaultUI: true,
+	        center: center
+	    });
+	
+	
+	
+	    //маркеры
+	    var i = 0;
+	    for (i = 0; i < coords.length; i++) {
+	        markers[i] = addMarker(coords[i], map, i);
+	        if (openedMarker && openedMarker.ind == i) {
+	            openedMarker = markers[i];
+	            openedMarker.setIcon("../i/point.png");
+	        }
+	    }    
+	
+	    //зоом +
+	    $("#map-zoom-plus").off("click").on("click", function () {
+	        var currentZoomLevel = zoom;
+	        if (currentZoomLevel != 21) {
+	            zoom = currentZoomLevel + 1;
+	
+	        }
+	        map.setZoom(zoom);
+	
+	    });
+	
+	    //зоом -
+	    $("#map-zoom-minus").off("click").on("click", function () {
+	        var currentZoomLevel = zoom;
+	        if (currentZoomLevel != 0) {
+	            zoom = currentZoomLevel - 1;
+	        }
+	        map.setZoom(zoom);
+	    });
+	}
 }
 
 function addMarker(location, map, i) {
