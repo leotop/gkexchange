@@ -70,7 +70,7 @@
         <label><input autocomplete="off" type="text" class="input req email" name="EMAIL" placeholder="<?=GetMessage("EMAIL")?>" value=""/></label>
         <label><input autocomplete="off" type="text" class="input req" name="PHONE" placeholder="<?=GetMessage("PHONE")?>" value=""/></label>
         <input type="hidden" name="IBLOCK_ID" value="10"/>
-        <button type="submit" class="button" onclick="$(this).parent().submit();yaCounter23705659.reachGoal('ORDER1'); return true;">
+        <button type="submit" class="button" onclick="yaCounter23705659.reachGoal('ORDER1'); return true;">
             <?=GetMessage("SEND_FORM")?>
         </button>                 
     </form>
