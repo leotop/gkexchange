@@ -159,7 +159,7 @@
                                     $value = "";
                                 }
                             ?>
-                            <textarea class="textarea <?if(in_array($propertyID, $arResult["PROPERTY_REQUIRED"])){?>req<?}?>" cols="<?=$arResult["PROPERTY_LIST_FULL"][$propertyID]["COL_COUNT"]?>" rows="<?=$arResult["PROPERTY_LIST_FULL"][$propertyID]["ROW_COUNT"]?>" name="PROPERTY[<?=$propertyID?>][<?=$i?>]"><?=$value?></textarea>
+                            <textarea class="textarea <?if(in_array($propertyID, $arResult["PROPERTY_REQUIRED"])){?>req_field<?}?>" cols="<?=$arResult["PROPERTY_LIST_FULL"][$propertyID]["COL_COUNT"]?>" rows="<?=$arResult["PROPERTY_LIST_FULL"][$propertyID]["ROW_COUNT"]?>" name="PROPERTY[<?=$propertyID?>][<?=$i?>]"><?=$value?></textarea>
                             <?
                             }
                             break;
@@ -182,7 +182,7 @@
                                     $value = "";
                                 }
                             ?>
-                            <input type="text" data-code="<?=$prop_code?>" class="input <?if(in_array($propertyID, $arResult["PROPERTY_REQUIRED"])){?>req<?}?>" name="PROPERTY[<?=$propertyID?>][<?=$i?>]" size="25" value="<?=$value?>" />
+                            <input type="text" data-code="<?=$prop_code?>" class="input <?if(in_array($propertyID, $arResult["PROPERTY_REQUIRED"])){?>req_field<?}?>" name="PROPERTY[<?=$propertyID?>][<?=$i?>]" size="25" value="<?=$value?>" />
                             <?
                             }
                             break;

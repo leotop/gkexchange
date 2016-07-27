@@ -27,18 +27,18 @@ $(function(){
         //провер€ем заполненные пол€       
         var br;
 
-        form.find(".req").each(function(){
+        form.find(".req_field").each(function(){
             var el = $(this), val = el.val();
 
             if (val.indexOf("«аполните") !== -1) {
                 val = "";
             }
 
-            var validEmail = ($(this).attr("name")=="EMAIL" || $(this).data("code")=="EMAIL") ? reEmailCheck.test(val) : true;      
+            var validEmail = ($(this).attr("name") == "EMAIL" || $(this).data("code") == "EMAIL") ? reEmailCheck.test(val) : true;      
 
-            if ((val.length > 0)&& validEmail) {}
-            else {
-
+            if ((val.length > 0)&& validEmail) {
+            	
+            } else {
                 $(this).parent().removeClass("good");
                 $(this).removeClass("good");
                 $(this).parent().addClass("nogood");
@@ -50,7 +50,6 @@ $(function(){
 
                 br = "yes";
             }
-
         });
 
 
