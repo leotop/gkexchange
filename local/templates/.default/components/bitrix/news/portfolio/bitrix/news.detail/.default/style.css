@@ -11,3 +11,126 @@ div.news-detail img.detail_picture
 {
 	color:#486DAA;
 }
+
+.portfolio-block
+{
+    margin-top: 45px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid #dadada;
+    overflow: hidden
+}
+
+.portfolio-block .block-id
+{
+    font-family: 'PragmaticaBold', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+.portfolio-block .h2
+{
+    padding-top: 32px;
+    padding-bottom: 24px; 
+    margin-bottom: 16px;
+    border-bottom: none;
+}
+
+.portfolio-block p
+{
+    border-bottom: 1px solid #dadada;
+    margin-bottom: 44px;
+    padding-bottom: 42px;
+    line-height: 28px;
+}
+
+.portfolio-block p:last-child
+{
+    border-bottom: none;
+    padding: 0 5px 0 0;
+    margin-bottom: 0;
+}
+
+.portfolio-block .properties-block {
+    height: 140px;
+    width: 340px;
+    border: 1px solid #a7a7a7;
+    border-radius: 5px;
+    box-sizing: border-box;
+    float:left;
+    font-size: 16px;
+    font-family: PragmaticaBookRegular, sans-serif;
+}
+
+.portfolio-block .properties-block .properties-block-value{
+    
+    padding: 30px 20px;
+    height: 89px;
+    width: 100%;
+    border-bottom: 1px solid #a7a7a7;
+    box-sizing: border-box;
+    line-height: 30px;
+    font-family: 'PragmaticaBold', sans-serif;       
+    font-weight: bold;
+    color: #333333;
+    font-size: 36px; 
+}
+
+.portfolio-block .properties-block .properties-block-value  .rubznak{
+    font-weight: 100;
+    line-height: 0px; 
+}
+
+.portfolio-block .properties-block .properties-block-name{
+    font-size: 16px;
+    padding: 15px 20px;
+    height: 48px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.portfolio-block .properties-block:last-child {
+    color: #ef3421;
+    border-color:#e6b1ab;
+    float:right;
+}
+
+.portfolio-block .properties-block:last-child .properties-block-value {
+    border-color:#e6b1ab;   
+    color: #ef3421;
+}
+
+.portfolio-block .portfolio-list {
+    padding: 19px;
+    width: auto;
+    border: 1px solid #cdcdcd;
+    box-sizing: border-box;
+    border-bottom: 0;    
+    font-size: 16px;
+    font-family: PragmaticaBookRegular, sans-serif;
+    color: #656565;
+    
+}
+
+.portfolio-block .portfolio-list:first-of-type {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.portfolio-block .portfolio-list:last-of-type {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: 1px solid #cdcdcd;
+    
+}
+
+.portfolio-block .portfolio-list .portfolio-list-circle{
+    margin-right: 20px;
+    margin-top: 4px;
+    height: 6px;
+    width: 6px;
+    border: 2px solid #818181;
+    border-radius: 6px;
+    float:left;
+}
+
