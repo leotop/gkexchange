@@ -15,7 +15,8 @@
 
 <?$block_id = 0; ?>
 
-<?if(isset($arResult["PROPERTIES"]["PROJECT_NAME"]) && isset($arResult["PROPERTIES"]["DESCRIPTION"])){?>
+
+<?if(is_array($arResult["PROPERTIES"]["PROJECT_NAME"]) && count($arResult["PROPERTIES"]["PROJECT_NAME"]) > 0){?>
 <div class="portfolio-block"> 
     
     <?$block_id = $block_id + 1;        
@@ -40,7 +41,11 @@
 </div>
 <?}?>
 
-<?if(isset($arResult["PROPERTIES"]["PRICE"]) && isset($arResult["PROPERTIES"]["HOURS_SPENT"])){?>
+<?if((is_array($arResult["PROPERTIES"]["PRICE"]["VALUE"])
+    && count($arResult["PROPERTIES"]["PRICE"]["VALUE"]) > 0)
+    && (is_array($arResult["PROPERTIES"]["HOURS_SPENT"]["VALUE"])
+    && count($arResult["PROPERTIES"]["HOURS_SPENT"]["VALUE"]) > 0)) 
+{?>
 <div class="portfolio-block">
     
     <?$block_id = $block_id + 1;        
@@ -77,7 +82,7 @@
 </div>
 <?}?>
 
-<?if(isset($arResult["PROPERTIES"]["INTEGRABLE_PRODUCTS"])){?>
+<?if(is_array($arResult["PROPERTIES"]["INTEGRABLE_PRODUCTS"]["VALUE"]) && count($arResult["PROPERTIES"]["INTEGRABLE_PRODUCTS"]["VALUE"]) > 0){?>
 <div class="portfolio-block">
 
     <?$block_id = $block_id + 1;        
@@ -107,7 +112,7 @@
 </div>
 <?}?>
 
-<?if(isset($arResult["PROPERTIES"]["SOLUTIONS"])){?>
+<?if(is_array($arResult["PROPERTIES"]["SOLUTIONS"]["VALUE"]) && count($arResult["PROPERTIES"]["SOLUTIONS"]["VALUE"]) > 0){?>
 <div class="portfolio-block">
 
     <?$block_id = $block_id + 1;        
@@ -135,7 +140,7 @@
 </div>
 <?}?>
 
-<?if(isset($arResult["PROPERTIES"]["EPILOG"])){?>
+<?if(is_array($arResult["PROPERTIES"]["EPILOG"]["VALUE"]) && count($arResult["PROPERTIES"]["EPILOG"]["VALUE"]) > 0){?>
 <div class="portfolio-block">
     <p><?=$arResult["PROPERTIES"]["EPILOG"]["VALUE"]?></p>     
 </div>
