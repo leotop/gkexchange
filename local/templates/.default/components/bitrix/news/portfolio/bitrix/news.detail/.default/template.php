@@ -16,7 +16,8 @@
 <?$block_id = 0; ?>
 
 
-<?if(is_array($arResult["PROPERTIES"]["PROJECT_NAME"]) && count($arResult["PROPERTIES"]["PROJECT_NAME"]) > 0){?>
+<?if(!empty($arResult["PROPERTIES"]["PROJECT_NAME"]["VALUE"]) 
+    && (!empty($arResult["DETAIL_TEXT"]) || is_array($arResult["PROPERTIES"]["DESCRIPTION"]["VALUE"]))){?>
 <div class="portfolio-block"> 
     
     <?$block_id = $block_id + 1;        
@@ -35,17 +36,20 @@
         <?=$arResult["PROPERTIES"]["PROJECT_NAME"]["VALUE"]?>
     </h2>
 
-    <?foreach ($arResult["PROPERTIES"]["DESCRIPTION"]["VALUE"] as $arVal):?>
-        <p><?=$arVal?></p>
-    <?endforeach;?>
+    <?if (is_array($arResult["PROPERTIES"]["DESCRIPTION"]["VALUE"])){
+        foreach ($arResult["PROPERTIES"]["DESCRIPTION"]["VALUE"] as $arVal){?>
+            <p><?=$arVal?></p>
+        <?}    
+    } else {
+        echo $arResult["DETAIL_TEXT"];            
+    }?>
+    
 </div>
 <?}?>
 
-<?if((is_array($arResult["PROPERTIES"]["PRICE"]["VALUE"])
-    && count($arResult["PROPERTIES"]["PRICE"]["VALUE"]) > 0)
-    && (is_array($arResult["PROPERTIES"]["HOURS_SPENT"]["VALUE"])
-    && count($arResult["PROPERTIES"]["HOURS_SPENT"]["VALUE"]) > 0)) 
-{?>
+<?//arshow($arResult['PROPERTIES']);?>
+
+<?if(!empty($arResult["PROPERTIES"]["PRICE"]["VALUE"]) && !empty($arResult["PROPERTIES"]["HOURS_SPENT"]["VALUE"])){?>
 <div class="portfolio-block">
     
     <?$block_id = $block_id + 1;        
@@ -140,9 +144,8 @@
 </div>
 <?}?>
 
-<?if(is_array($arResult["PROPERTIES"]["EPILOG"]["VALUE"]) && count($arResult["PROPERTIES"]["EPILOG"]["VALUE"]) > 0){?>
+<?if(!empty($arResult["PROPERTIES"]["EPILOG"]["VALUE"])){?>
 <div class="portfolio-block">
     <p><?=$arResult["PROPERTIES"]["EPILOG"]["VALUE"]?></p>     
 </div>
-<?}?>  
-
+<?}?>
