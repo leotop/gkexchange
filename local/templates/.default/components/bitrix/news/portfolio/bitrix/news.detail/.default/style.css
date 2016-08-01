@@ -20,6 +20,12 @@ div.news-detail img.detail_picture
     overflow: hidden
 }
 
+.portfolio-block:last-child
+{
+    border-bottom: none;
+    padding-bottom: 62px;
+}
+
 .portfolio-block .block-id
 {
     font-family: 'PragmaticaBold', sans-serif;
