@@ -20,16 +20,11 @@
     && (!empty($arResult["DETAIL_TEXT"]) || is_array($arResult["PROPERTIES"]["DESCRIPTION"]["VALUE"]))){?>
 <div class="portfolio-block"> 
     
-    <?$block_id = $block_id + 1;        
-    if ($block_id < 10){
-        $block_id_str = '0'.strval($block_id);
-    } else {
-        $block_id_str = strval($block_id);    
-    };
-    ?>
-    
     <span class="block-id">
-        <?=$block_id_str?>
+        <?
+            $block_id = increase_block_id($block_id);
+            echo $block_id;
+        ?>
     </span>
     
     <h2 class="h2">
@@ -47,21 +42,15 @@
 </div>
 <?}?>
 
-<?//arshow($arResult['PROPERTIES']);?>
-
 <?if(!empty($arResult["PROPERTIES"]["PRICE"]["VALUE"]) && !empty($arResult["PROPERTIES"]["HOURS_SPENT"]["VALUE"])){?>
 <div class="portfolio-block">
     
-    <?$block_id = $block_id + 1;        
-    if ($block_id < 10){
-        $block_id_str = '0'.strval($block_id);
-    } else {
-        $block_id_str = strval($block_id);    
-    };
-    ?>
-    
+   
     <span class="block-id">
-        <?=$block_id_str?>
+        <?
+            $block_id = increase_block_id($block_id);
+            echo $block_id;
+        ?>
     </span> 
     <h2 class="h2">
         <?=GetMessage("SOME_STATISTIC");?>
@@ -89,17 +78,11 @@
 <?if(is_array($arResult["PROPERTIES"]["INTEGRABLE_PRODUCTS"]["VALUE"]) && count($arResult["PROPERTIES"]["INTEGRABLE_PRODUCTS"]["VALUE"]) > 0){?>
 <div class="portfolio-block">
 
-    <?$block_id = $block_id + 1;        
-    if ($block_id < 10){
-        $block_id_str = '0'.strval($block_id);
-    }
-    else {
-        $block_id_str = strval($block_id);    
-    };
-    ?>
-    
     <span class="block-id">
-        <?=$block_id_str?>
+        <?
+            $block_id = increase_block_id($block_id);
+            echo $block_id;
+        ?>
     </span> 
 
     <h2 class="h2">
@@ -119,17 +102,11 @@
 <?if(is_array($arResult["PROPERTIES"]["SOLUTIONS"]["VALUE"]) && count($arResult["PROPERTIES"]["SOLUTIONS"]["VALUE"]) > 0){?>
 <div class="portfolio-block">
 
-    <?$block_id = $block_id + 1;        
-    if ($block_id < 10){
-        $block_id_str = '0'.strval($block_id);
-    }
-    else {
-        $block_id_str = strval($block_id);    
-    };
-    ?>
-    
     <span class="block-id">
-        <?=$block_id_str?>
+        <?
+            $block_id = increase_block_id($block_id);
+            echo $block_id;
+        ?>
     </span>
      
     <h2 class="h2">

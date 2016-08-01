@@ -60,4 +60,20 @@
 
 
     }
+    
+    /* Повышает айдишник секции на детальной странице портфолио*/
+    
+    function increase_block_id($block_id){
+        if (intval($block_id) < 0) {
+            return;
+        }
+        $block_id = intval($block_id);
+        $block_id = $block_id + 1;        
+        if ($block_id < 10) {
+            $block_id_str = '0'.strval($block_id);
+            } else {
+            $block_id_str = strval($block_id);    
+        };
+        return $block_id_str;
+    }
 ?>
