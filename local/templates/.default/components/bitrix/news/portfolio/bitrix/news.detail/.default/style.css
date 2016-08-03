@@ -14,13 +14,25 @@ div.news-detail img.detail_picture
 
 .portfolio-block
 {
-    margin-top: 45px;
-    padding-bottom: 48px;
+    padding-bottom: 45px;
     border-bottom: 1px solid #dadada;
+    color: #a1a1a1;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: PragmaticaBookRegular, sans-serif;
     overflow: hidden
 }
 
-.portfolio-block:last-child
+.portfolio-block a
+{
+    display: inline-block;
+    color: #ef3421;
+    border-bottom: 1px solid #efb4a7;
+    padding-bottom: 2px;
+    text-decoration: none;
+}
+
+.portfolio-block:last-of-type
 {
     border-bottom: none;
     padding-bottom: 62px;
@@ -28,33 +40,64 @@ div.news-detail img.detail_picture
 
 .portfolio-block .block-id
 {
+    margin-top: 32px;
+    color: #000000;
     font-family: 'PragmaticaBold', sans-serif;
     font-weight: bold;
     font-size: 18px;
-    margin-bottom: 45px;
 }
 
 .portfolio-block .h2
 {
-    padding-top: 32px;
-    padding-bottom: 24px; 
-    margin-bottom: 16px;
+    padding-top: 30px;
+    padding-bottom: 0px; 
+    margin-bottom: 0px;
     border-bottom: none;
+}
+
+.portfolio-block .description
+{
+    border-bottom: 1px solid #dadada;
+    padding-top: 38px;
+    padding-bottom: 42px;
+    line-height: 28px;
+    color: #a1a1a1;
+}
+
+.portfolio-block .description:last-of-type
+{
+    border-bottom: none;
+    padding-bottom: 0px;
 }
 
 .portfolio-block p
 {
     border-bottom: 1px solid #dadada;
-    margin-bottom: 44px;
+    padding-top: 38px;
     padding-bottom: 42px;
     line-height: 28px;
+    color: #a1a1a1;
+    box-sizing: border-box;
 }
 
-.portfolio-block p:last-child
+.portfolio-block p:last-of-type
 {
     border-bottom: none;
-    padding: 0 5px 0 0;
-    margin-bottom: 0;
+    padding-bottom: 0px;
+}
+
+.portfolio-block p:first-child
+{
+    padding-top: 0px;
+}
+
+.portfolio-block .rectangle-block {
+    overflow: hidden;
+    margin-top: 20px; 
+}
+
+.portfolio-block .rectangle-block:first-of-type {
+    margin-top: 48px;       
 }
 
 .portfolio-block .properties-block {
@@ -92,6 +135,8 @@ div.news-detail img.detail_picture
     padding: 15px 20px;
     height: 48px;
     width: 100%;
+    line-height: 1px;
+    line-height: 17px;
     box-sizing: border-box;
 }
 
@@ -118,7 +163,8 @@ div.news-detail img.detail_picture
     
 }
 
-.portfolio-block .portfolio-list:first-of-type {
+.portfolio-block .portfolio-list:first-child {
+    margin-top: 42px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -132,7 +178,7 @@ div.news-detail img.detail_picture
 
 .portfolio-block .portfolio-list .portfolio-list-circle{
     margin-right: 20px;
-    margin-top: 4px;
+    margin-top: 8px;
     height: 6px;
     width: 6px;
     border: 2px solid #818181;

@@ -53,6 +53,17 @@ $this->setFrameMode(true);
 <br />
 <?endif?>
 <?$APPLICATION->IncludeComponent(
+    "bitrix:main.include", 
+    "portfolio.include", 
+    array(
+        "AREA_FILE_SHOW" => "page",
+        "AREA_FILE_SUFFIX" => "inc",
+        "EDIT_TEMPLATE" => "",
+        "COMPONENT_TEMPLATE" => "portfolio.include"
+    ),
+    false
+);?>
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"",
 	Array(
