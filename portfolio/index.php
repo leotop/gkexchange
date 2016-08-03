@@ -2,11 +2,12 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("keywords", "интеграция 1с-битрикс и 1с, интеграция 1с и 1с-битрикс, интеграция 1с,  интеграция 1с-битрикс, интеграция сайта");
 $APPLICATION->SetPageProperty("description", "Проекты, которые уже получили от нас качественную интеграцию 1С и 1С-Битрикс.");
-$APPLICATION->SetTitle("Портфолио");
-?><?$APPLICATION->IncludeComponent(
-	"bitrix:news", 
-	"portfolio", 
-	array(
+$APPLICATION->SetTitle("Выполненые проекты");
+?>
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news",
+	"portfolio",
+	Array(
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
@@ -20,22 +21,15 @@ $APPLICATION->SetTitle("Портфолио");
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
+		"COMPONENT_TEMPLATE" => "portfolio",
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "N",
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
-		"DETAIL_FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"DETAIL_FIELD_CODE" => array(0=>"",1=>"",),
 		"DETAIL_PAGER_SHOW_ALL" => "N",
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
-		"DETAIL_PROPERTY_CODE" => array(
-			0 => "PROJECT_NAME",
-			1 => "SITE_NAME",
-			2 => "PRICE",
-			3 => "",
-		),
+		"DETAIL_PROPERTY_CODE" => array(0=>"PROJECT_NAME",1=>"SITE_NAME",2=>"PRICE",3=>"",),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
@@ -48,21 +42,8 @@ $APPLICATION->SetTitle("Портфолио");
 		"IBLOCK_TYPE" => "gkexchange",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"LIST_FIELD_CODE" => array(
-			0 => "TAGS",
-			1 => "",
-		),
-		"LIST_PROPERTY_CODE" => array(
-			0 => "EPILOG",
-			1 => "INTEGRABLE_PRODUCTS",
-			2 => "SOLUTIONS",
-			3 => "HOURS_SPENT",
-			4 => "PROJECT_NAME",
-			5 => "SITE_NAME",
-			6 => "DESCRIPTION",
-			7 => "PRICE",
-			8 => "",
-		),
+		"LIST_FIELD_CODE" => array(0=>"TAGS",1=>"",),
+		"LIST_PROPERTY_CODE" => array(0=>"EPILOG",1=>"INTEGRABLE_PRODUCTS",2=>"SOLUTIONS",3=>"HOURS_SPENT",4=>"PROJECT_NAME",5=>"SITE_NAME",6=>"DESCRIPTION",7=>"PRICE",8=>"",),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
@@ -77,6 +58,7 @@ $APPLICATION->SetTitle("Портфолио");
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"SEF_FOLDER" => "/portfolio/",
 		"SEF_MODE" => "Y",
+		"SEF_URL_TEMPLATES" => array("news"=>"","section"=>"","detail"=>"#ELEMENT_CODE#/",),
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "Y",
 		"SET_TITLE" => "Y",
@@ -91,13 +73,6 @@ $APPLICATION->SetTitle("Портфолио");
 		"USE_RATING" => "N",
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
-		"USE_SHARE" => "N",
-		"COMPONENT_TEMPLATE" => "portfolio",
-		"SEF_URL_TEMPLATES" => array(
-			"news" => "",
-			"section" => "",
-			"detail" => "#ELEMENT_CODE#/",
-		)
-	),
-	false
+		"USE_SHARE" => "N"
+	)
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
