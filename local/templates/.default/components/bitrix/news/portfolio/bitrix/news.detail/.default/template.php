@@ -69,29 +69,38 @@
                 </div>
                 <div class='properties-block-name'>
                     <?=GetMessage("HOURS_SPENT");?>                      
-                </div> 
+                </div>   
             </div>
         </div> 
         <?if(!empty($arResult["PROPERTIES"]["PRODUCTS_COUNT"]["VALUE"]) && !empty($arResult["PROPERTIES"]["TRADE_OFFERS_COUNT"]["VALUE"])){?>
-            <div class = 'rectangle-block'>   
-                <div>
-                    <div class='properties-block'>
-                        <div class='properties-block-value'>
-                            <?=$arResult["PROPERTIES"]["PRODUCTS_COUNT"]["VALUE"]?>            
-                        </div> 
-                        <div class='properties-block-name'>
-                            <?=GetMessage("PRODUCTS_COUNT");?>          
-                        </div>
+            <div class = 'rectangle-block'>
+                <div class='properties-block'>
+                    <div class='properties-block-value'>
+                        <?=$arResult["PROPERTIES"]["PRODUCTS_COUNT"]["VALUE"]?>            
                     </div> 
-                    <div class='properties-block'>
-                        <div class='properties-block-value'>
-                            <?=$arResult["PROPERTIES"]["TRADE_OFFERS_COUNT"]["VALUE"]?>           
-                        </div>
-                        <div class='properties-block-name'>
-                            <?=GetMessage("TRADE_OFFERS_COUNT");?>                      
-                        </div> 
+                    <div class='properties-block-name'>
+                        <?=GetMessage("PRODUCTS_COUNT");?>          
                     </div>
+                </div> 
+                <div class='properties-block'>
+                    <div class='properties-block-value'>
+                        <?=$arResult["PROPERTIES"]["TRADE_OFFERS_COUNT"]["VALUE"]?>           
+                    </div>
+                    <div class='properties-block-name'>
+                        <?=GetMessage("TRADE_OFFERS_COUNT");?>                      
+                    </div> 
                 </div>
+            </div>
+        <?} elseif(!empty($arResult["PROPERTIES"]["PRODUCTS_COUNT"]["VALUE"])){?>
+            <div class = 'rectangle-block'>
+                <div class='properties-block'>
+                    <div class='properties-block-value'>
+                        <?=$arResult["PROPERTIES"]["PRODUCTS_COUNT"]["VALUE"]?>            
+                    </div> 
+                    <div class='properties-block-name'>
+                        <?=GetMessage("PRODUCTS_COUNT");?>          
+                    </div>
+                </div> 
             </div>
         <?}?>
     </div>
@@ -145,7 +154,7 @@
     </div>
     <?}?>
 
-    <?if(!empty($arResult["PROPERTIES"]["EPILOG"]["~VALUE"])){?>
+    <?if(!empty($arResult["PROPERTIES"]["EPILOG"]["~VALUE"]["TEXT"])){?>
     <div class="portfolio-block">
         <?foreach ($arResult["PROPERTIES"]["EPILOG"]["~VALUE"] as $arVal){?>
             <div class="description"><?=$arVal["TEXT"];?></div>

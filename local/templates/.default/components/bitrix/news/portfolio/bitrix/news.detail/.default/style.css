@@ -140,6 +140,7 @@ div.news-detail img.detail_picture
     box-sizing: border-box;
 }
 
+
 .portfolio-block .properties-block:last-child {
     color: #ef3421;
     border-color:#e6b1ab;
@@ -149,6 +150,17 @@ div.news-detail img.detail_picture
 .portfolio-block .properties-block:last-child .properties-block-value {
     border-color:#e6b1ab;   
     color: #ef3421;
+}
+
+.portfolio-block .properties-block:first-child {
+    color: #333333;;
+    border-color:#a7a7a7;
+    float:left;
+}
+
+.portfolio-block .properties-block:first-child .properties-block-value {
+    border-color:#a7a7a7;   
+    color: #333333;;
 }
 
 .portfolio-block .portfolio-list {
