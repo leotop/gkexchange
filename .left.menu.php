@@ -8,8 +8,8 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Заполнить бриф", 
-		"/brief/", 
+		"Услуги", 
+		"/services/", 
 		Array(), 
 		Array(), 
 		"" 
@@ -22,8 +22,8 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Услуги", 
-		"/services/", 
+		"Заполнить бриф", 
+		"/brief/",    
 		Array(), 
 		Array(), 
 		"" 
