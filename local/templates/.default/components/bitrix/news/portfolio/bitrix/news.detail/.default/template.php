@@ -154,7 +154,7 @@
     </div>
     <?}?>
 
-    <?if(!empty($arResult["PROPERTIES"]["EPILOG"]["~VALUE"]["TEXT"])){?>
+    <?if(!empty($arResult["PROPERTIES"]["EPILOG"]["~VALUE"])){?>
     <div class="portfolio-block">
         <?foreach ($arResult["PROPERTIES"]["EPILOG"]["~VALUE"] as $arVal){?>
             <div class="description"><?=$arVal["TEXT"];?></div>
