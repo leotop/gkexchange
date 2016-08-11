@@ -6,13 +6,9 @@
     overflow: hidden
 }
 
-.update-1C-block .h2
-{
-    margin: 0px;
-}
 
 .update-1C-block .block-wrapper
-{
+{ 
     overflow: hidden
 }
 
@@ -25,7 +21,9 @@
 
 .update-1C-block .h2
 {
+    margin: 0px;
     padding-top: 32px;
+    padding-bottom: 0px;
     line-height: 32px;
     border-bottom: none;
 }
@@ -43,7 +41,6 @@
 
  .update-1C-block .update-1C-list 
  {
-    padding: 19px;
     width: auto;
     border: 1px solid #cdcdcd;
     box-sizing: border-box;
@@ -51,27 +48,30 @@
     font-size: 16px;
     font-family: PragmaticaBookRegular, sans-serif;
     color: #656565;
-    
+    height: 60px;
+    line-height: 60px;    
 }
 
 .update-1C-block .update-1C-list:first-of-type 
 {
+    box-sizing: border-box;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 }
 
 .update-1C-block .update-1C-list:last-child 
 {
+    box-sizing: border-box;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     border-bottom: 1px solid #cdcdcd;
-    
 }
 
 .update-1C-block .update-1C-list .update-1C-list-circle
 {
     margin-right: 20px;
-    margin-top: 4px;
+    margin-left: 20px;
+    margin-top: 24px;
     height: 6px;
     width: 6px;
     border: 2px solid #818181;
@@ -81,7 +81,7 @@
 
 .update-1C-block .update-1C-text
 {
-    padding-top: 50px;
+    margin-top: 45px;
     font-family: PragmaticaBookRegular, sans-serif;
     font-size: 16px;
     color: #000000;
@@ -89,7 +89,7 @@
 
 .update-1C-block .update-1C-link
 {
-    padding-top: 36px;
+    margin-top: 30px;
 }
 
 .update-1C-block .update-1C-polygon-in-circle
@@ -111,25 +111,29 @@
     color: #ef3421;
     font-family: PragmaticaBookRegular, sans-serif;
     font-size: 16px;
-    border-bottom: 1px solid #fbc8c3; 
+    border-bottom: 1px solid #f7958b; 
     text-decoration: none;
     float: left;
 }
 
 .update-1C-block .table 
 {
+    margin-top: 36px;
     border-spacing: 0;
     border: 1px solid #cdcdcd;
     border-radius: 6px;
     border-collapse: separate;
+    table-layout: fixed;
+    width: 100%;
 }
 
 .update-1C-block .table td, .update-1C-block .table th 
 {
-    padding: 20px;
+    padding: 15px;
+    padding-left: 20px;
     border-left: 1px solid #cdcdcd;
-    border-top: 1px solid #cdcdcd;  
-    font-family: PragmaticaBookRegular, sans-serif;
+    border-top: 1px solid #cdcdcd;
+    vertical-align: top;
     color: #808080;
     font-size: 16px;
     text-align: left;
@@ -139,7 +143,15 @@
 .update-1C-block .table th 
 {
     border-top: none;
-    color: #000000;
+    color: #000000;  
+    font-family: PragmaticaMedium, sans-serif;
+    font-weight: normal;
+}
+
+.update-1C-block .table td 
+{  
+    color: #808080;
+    font-family: PragmaticaBookRegular, sans-serif;
 }
 
 .update-1C-block .table td:first-child, .update-1C-block .table th:first-child 
@@ -173,6 +185,13 @@
     text-align: center;
 }
 
+.update-1C-block .wrapper-with-margin
+{
+    margin-top: 42px; 
+    overflow: hidden
+}
+
+
 .update-1C-block .specific-info-block 
 {
     height: 140px;
@@ -202,10 +221,10 @@
     border-right: 1px solid #e6b1ab;
     box-sizing: border-box;
     line-height: 36px;
-    letter-spacing: -6px;
+    letter-spacing: -3px;
     font-family: 'PragmaticaBold', sans-serif;  
     text-align: center; 
-    font-weight: bold;
+    font-weight: normal;
     color: #ef3421;
     font-size: 60px; 
     float:left;
@@ -264,7 +283,8 @@
     padding: 16px;
     font-size: 26px;
     line-height: 26px;
-    font-weight: bold;
+    font-family: PragmaticaBold , sans-serif;
+    letter-spacing: -3px;
     height: 48px;
     width: 100%;
     box-sizing: border-box;
@@ -277,25 +297,86 @@
 
 
 /* Порядок обновления 1С */
+
+.update-1C-block .update-order-block:first-of-type
+{
+
+}
+
+.update-1C-block .update-order-block:first-of-type .id-circle
+{
+    border: 1px solid #ef3421;    
+    color: #ffffff;     
+    background-color: #ef3421;
+}
+
+.update-1C-block .update-order-block:first-of-type .after-id-title 
+{
+    height: 40px;
+    padding: 0px 20px; 
+    float:left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: PragmaticaBold , sans-serif;
+    font-size: 14px;
+    color: #ef3421; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
+
+.update-1C-block .update-order-block:first-of-type .update-1C-list
+{
+    border-color: #f1b9b4;
+    color: #ef3421;
+    background-color: #fcf7f7;
+}
+
+.update-1C-block .update-order-block:first-of-type .update-1C-list:first-of-type 
+{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.update-1C-block .update-order-block:first-of-type .update-1C-list:last-child 
+{
+    border-bottom: 1px solid #f1b9b4;    
+}
+
+.update-1C-block .update-order-block:first-of-type .update-1C-list .update-1C-list-circle
+{
+    border: 2px solid #ef3421;    
+}
+
+.update-1C-block .update-order-block:first-of-type .separation-line .separation-line-cirlce
+{
+    border-color: #ef3421;
+    background-color: #ef3421;
+}
+
+.update-1C-block .update-order-block:first-of-type .separation-line .line
+{
+    border-color: #f1b9b4;       
+}
+
+.update-1C-block .update-order-block:first-of-type .block-with-list 
+{
+    border-color: #f1b9b4;
+}
+
 .update-1C-block .id-circle 
 {
-    padding: 10px;    
+    line-height: 38px;    
     width: 40px;
     height: 40px;
-    border: 1px solid #818181;
+    border: 2px solid #c1c1c1;
     border-radius: 20px;   
     box-sizing: border-box;
     font-family: PragmaticaBookRegular , sans-serif;    
     color: #000000;   
     text-align: center;    
     float: left;
-}
-
-.update-1C-block .id-circle:first-child 
-{
-    border: 1px solid #ef3421;    
-    color: #ffffff;     
-    background-color: #ef3421;
 }
 
 .update-1C-block .after-id-title 
@@ -306,9 +387,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: PragmaticaBookRegular , sans-serif;
-    font-weight: bold;    
-    color: #ef3421;
+    font-family: PragmaticaBold , sans-serif;
+    font-size: 14px;
+    color: #000000;
     text-transform: uppercase;
     letter-spacing: 1px;
     
@@ -316,35 +397,138 @@
 
 .update-1C-block .block-with-list 
 {
-    border-left: 1px solid #f1b9b4;   
+    border-left: 1px solid #cdcdcd;   
     padding-left: 40px; 
     margin-left: 19px;
     padding-top: 20px;
     padding-bottom: 20px;
+    position:relative;
 }
 
 .update-1C-block .block-with-list .update-1C-list-block
 {
-    margin: 0px; 
+    margin: 0px;
+    margin-top: 1px; 
 }
 
 .update-1C-block .separation-line
 {
-    
+    position:absolute; 
+    left:0px;
+    top:50%;
+    bottom: 1px;       
 }
 
 .update-1C-block .separation-line .separation-line-cirlce
 {
-    width: 12px;
-    height: 12px;
-    border: 1px solid #ef3421;    
-    border-radius: 11px;
-    background-color: #ef3421;
-    box-sizing: border-box;        
+    width: 11px;
+    height: 11px;
+    border: 1px solid #818181;    
+    border-radius: 6px;
+    background-color: #818181;
+    box-sizing: border-box;
+    position:absolute; 
+    left:-6px;
+    top:-5px;
 }
 
 .update-1C-block .separation-line .line
 {
     width: 40px;
-    border-bottom: 1px solid #f1b9b4;    
+    border-bottom: 1px solid #cdcdcd;
+    position:absolute;          
+}
+
+.update-1C-block .update-1C-list-block
+{
+    margin-top: 38px;
+}
+
+.update-1C-block .white-line
+{
+    height: 50%;
+    top: 50%;
+    left: -3px;
+    border-left: 5px solid #ffffff;
+    box-sizing: border-box;
+    position:absolute;          
+}
+
+/*Всплывающие окна*/
+.style-reset
+{
+    background-color: #ffffff;
+    padding: 0px;
+}
+.update-1C-popup
+{   
+    margin: 5% auto;
+    width: 700px;
+    border-radius:5px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.update-1C-popup ul li 
+{
+    background: url(/local/templates/NEW_gkexchange_inner/img/list.png) no-repeat 0 3px;
+    padding: 0 0 15px 30px;
+    color: #848484;
+    font: 16px/1 'PragmaticaBookRegular', sans-serif;
+}
+
+.update-1C-popup li 
+{
+    display: list-item;
+}
+
+.update-1C-popup ul 
+{
+    padding-top: 38px;
+    list-style: none;
+}
+
+
+.update-1C-popup h2
+{
+    color: #333;
+    font: 22px/1 'PragmaticaBold', sans-serif;
+    padding: 43px 0 23px;
+    margin: 0 0 22px;
+    border-bottom: 1px solid #dadada;
+    letter-spacing: -0.1px;    
+}
+
+.update-1C-popup b
+{
+    
+}
+
+.update-1C-popup h3
+{
+    color: #333;
+    padding: 33px 0 23px;
+    font: 18px/1 'PragmaticaBold', sans-serif;
+    letter-spacing: -0.1px;    
+}
+
+.update-1C-popup p 
+{
+    padding-top: 38px;
+    line-height: 28px;
+    color: #848484;
+    box-sizing: border-box;
+    font: 16px/28px 'PragmaticaBookRegular', sans-serif;    
+}
+
+.update-1C-popup .close 
+{
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 20px;
+    background: url(/local/templates/NEW_gkexchange_inner/img/close.png) no-repeat 0 0;
 }

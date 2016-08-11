@@ -480,6 +480,18 @@ function show_popup(n){
             $("#p1").fadeIn(250);
 
             break;
+        
+        //Наличие подписки ИТС    
+        case 4:
+            $("#p4").fadeIn(250);
+
+            break;
+        
+        //Лицензинность программ 1С   
+        case 5:
+            $("#p5").fadeIn(250);
+
+            break;
 
         //окно success
         case 9:
