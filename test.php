@@ -377,17 +377,4 @@
         </div>
     </div>
 </div>
-<script>
-    $(document).ready(function(){
-        $(".js-popup-link").on("click", function(){
-            $(".update-1C-popup").fadeOut();  
-            var popupId = $(this).data("popup-id");
-            console.log(popupId);
-            $("#"+popupId).fadeIn("slow");               
-        }); 
-        $(".js-close").on("click", function(){
-            $(".update-1C-popup").fadeOut();              
-        });
-    });
-</script>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
