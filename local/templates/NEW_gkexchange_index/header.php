@@ -17,7 +17,7 @@
         }
         $indexData = getIndexPageContentByUtm($utm_content);   
     ?>       
-
+<meta name="yandex-verification" content="4ea7d7e3c4a98fc2" />
 </head>
 <body> 
 
