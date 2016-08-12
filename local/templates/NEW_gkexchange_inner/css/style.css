@@ -714,11 +714,24 @@ font: 24px/1 'PragmaticaMedium', sans-serif; }
 .row .h2 {
     color: #333;
     font: 22px/1 'PragmaticaBold', sans-serif;
-    padding: 43px 0 23px;
-    margin: 0 0 22px;
+    padding: 43px 0 23px 0;
+    margin: 0 0 22px 0;
     border-bottom: 1px solid #dadada;
     letter-spacing: -0.1px; 
 }
+
+.row a.h2 {
+    color: #ef3421;
+    font: 22px/1 'PragmaticaBold', sans-serif;
+    padding: 43px 0 23px 0 ;
+    margin: 0 0 22px 0;
+    border-bottom: 1px solid #dadada;
+    letter-spacing: -0.1px;
+    text-decoration: none;
+    width:100% !important;
+    display: block; 
+}
+
 .row .h3 {
     font: 22px/1 'PragmaticaBold', sans-serif;
     padding: 23px 0 3px;
