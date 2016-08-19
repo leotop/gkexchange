@@ -15,7 +15,7 @@
 
 <?$block_id = 0; ?>
 <?if(!empty($arResult["PROPERTIES"]["PROJECT_NAME"]["VALUE"]) 
-    && (!empty($arResult["DETAIL_TEXT"]) || is_array($arResult["PROPERTIES"]["DESCRIPTION"]["VALUE"]["TEXT"]))){?>
+    || (!empty($arResult["DETAIL_TEXT"]) || is_array($arResult["PROPERTIES"]["DESCRIPTION"]["VALUE"]["TEXT"]))){?>
 <div>    
     <div class="portfolio-block"> 
         
