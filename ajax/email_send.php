@@ -31,12 +31,39 @@
         "DETAIL_TEXT"    => $text,
     );
     
+    $crm_data = array();
+	
+	switch ($iblock_id) {
+		case 10:
+			$crm_data = array(
+				"TITLE"      => iconv('CP1251', 'UTF-8', "Заявка по акции"),
+				"NAME"       => $_POST["NAME"],
+				"EMAIL_WORK" => $email,
+				"PHONE_WORK" => $phone,
+				"SOURCE_ID"  => "WEB"
+			);
+			break;
+		case 7:
+			$crm_data = array(
+				"TITLE"         => iconv('CP1251', 'UTF-8', "Заявка с сайта gkexchange.ru"),
+				"NAME"          => $_POST["NAME"],
+				"COMPANY_TITLE" => $_POST["COMPANY"],
+				"EMAIL_WORK"    => $email,
+				"PHONE_WORK"    => $phone,
+				"COMMENTS"      => $_POST["TEXT"],
+				"SOURCE_ID"     => "WEB"
+			);
+			break;
+	}
+	
     if ($el->Add($arLoadProductArray) ) {
         echo "OK";
     } else {
         echo "ERROR";    
     }    
     
+	createCRMLead($crm_data);
+	
     //d зависимости от инфоблока выбираем нужный тип почтового события
     switch ($iblock_id) {
         case 7: $event_type = "FORM_SUBMIT"; break;

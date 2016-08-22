@@ -1,6 +1,6 @@
 <?  
     CModule::IncludeModule('iblock');
-
+	file_exists($_SERVER["DOCUMENT_ROOT"] . "/local/php_interface/include/.config.php") ? require_once($_SERVER["DOCUMENT_ROOT"] . "/local/php_interface/include/.config.php") : "";
     define("INDEX_PAGE_CONTENT_IBLOCK", 8); //инфоблок с контентом для главной страницы
 
 
@@ -76,4 +76,32 @@
         };
         return $block_id_str;
     }
+	
+	/**
+	 * Создаем лид в CRM
+	 * 
+	 * @param array $arFields
+	 * @return void
+	 **/
+	function createCRMLead($arFields) {
+		$postdata = http_build_query(
+		    array_merge(array(
+		        'LOGIN'             => CRM_LOGIN,
+		        'PASSWORD'          => CRM_PASSWORD,
+		        'UF_CRM_1369307880' => CRM_SOURCE_PROJECT,
+		        'ASSIGNED_BY_ID'    => CRM_ASSIGNED
+		    ), $arFields)
+		);
+		
+		$opts = array('http' =>
+		    array(
+		      'method'  => 'POST',
+		      'header'  => 'Content-type: application/x-www-form-urlencoded',
+		      'content' => $postdata
+		    )
+		);
+		
+		$context = stream_context_create($opts);
+		$result = file_get_contents('http://corp.webgk.net/crm/configs/import/lead.php', false, $context);
+	}
 ?>
