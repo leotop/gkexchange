@@ -2,7 +2,7 @@
 
 <div class="forma popup" id="p1">
     <div class="close"></div>
-    <div class="h1">
+    <div class="h1" id="js_project_form_header">
         <?=GetMessage("ORDER_FORM")?>
     </div>
 

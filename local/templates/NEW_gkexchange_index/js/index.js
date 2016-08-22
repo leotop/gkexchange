@@ -63,8 +63,17 @@ $(document).ready(function () {
                 IBLOCK_ID : form.find("input[name='IBLOCK_ID']").val(),
                 }, function(data){
 					data = data.trim();
-                    if (data == "OK") {    
-                        alert("Ваша заявка принята!");  
+                    if (data == "OK") {
+                    	if (form.find("input[name='IBLOCK_ID']").val() == 7) {// форма заказа проекта
+                    		$("#js_project_form_header").text("Ваша заявка принята!");
+                    		$("#form").hide();
+                    		$("#js_project_form_header").css("margin-top", ($("#p1").height() / 2) - 190);
+                    		setTimeout(function(){
+                    			$(".close").click();
+                    		}, 3000)
+                    	} else {
+                    		alert("Ваша заявка принята!");  	
+                    	}
                         form.find("input[type=text], textarea").val("");     
                     } else {
                         alert("Произошла ошибка! Проверьте правильность введенных данных и попробуйте снова."); 
