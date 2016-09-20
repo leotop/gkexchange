@@ -1,7 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("title-top", "Услуги – интеграция 1С");
-$APPLICATION->SetPageProperty("title", "Услуги – интеграция 1С");
 $APPLICATION->SetPageProperty("description", "Интеграция 1с и сайтов на Битриксе,  выгрузка данных через файлы, интеграция с Битрикс 24 от специалистов компании GKexchange");
 $APPLICATION->SetPageProperty("keywords", "услуги, Gkexchange, Москва, интеграция интернет-магазина, 1С, Битрикс 24, Bitrix, API, выгрузка данных");
 $APPLICATION->SetTitle("Услуги – интеграция интернет-магазина и 1С, настройка API от компании GKexchange");

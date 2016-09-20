@@ -1,7 +1,6 @@
 <?
     require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("title-top", "Контакты");
-$APPLICATION->SetPageProperty("title", "GKexchange  - контактная информация компании по интеграции 1с-Битрикс");
 $APPLICATION->SetPageProperty("keywords", "контакты, адрес, телефон, GKexchange");
 $APPLICATION->SetPageProperty("description", "Контакты: заказать интеграцию в компании GKexchange");
     $APPLICATION->SetTitle("GKexchange - контактная информация компании по интеграции 1С-Битрикс");

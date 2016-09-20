@@ -4,7 +4,6 @@ $APPLICATION->SetPageProperty("title-top", "Бриф на интеграцию с 1С");
 $APPLICATION->SetPageProperty("keywords", "БРИФ, задание, консультация, 1с-Битрикс, интеграция, GKexchange");
 $APPLICATION->SetPageProperty("description", "Заполните бриф для  интеграции  интернет-магазина на 1С-Битрикс и 1С");
     $APPLICATION->SetTitle("GKexchange - Бриф для получения консультации по интеграции 1С и 1С-Битрикс");
-    $APPLICATION->SetPageProperty("title", "Бриф на интеграцию с 1С");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:iblock.element.add.form", 
 	"brief_new", 
