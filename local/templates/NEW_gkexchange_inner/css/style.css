@@ -883,7 +883,7 @@ background: url(../img/close.png) no-repeat 0 0; }
 background-position: 0 -26px; }
 .forma .h1 {
     text-align: center;
-padding: 145px 0 64px; }
+padding: 45px 0 64px; }
 .forma span {
 color: #ef3e21; }
 .forma form {
@@ -902,7 +902,7 @@ margin: 0 0 20px; }
     height: 85px;
 font: 15px/20px 'PragmaticaBookRegular', sans-serif; }
 .forma label .textarea {
-height: 160px; }
+height: 100px; }
 .forma label .input {
 height: 18px; }
 .forma .button {

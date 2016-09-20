@@ -4,7 +4,7 @@ IncludeTemplateLangFile(__FILE__);
 <html>
 <head>
 <?$APPLICATION->ShowHead();?>
-<title><?$APPLICATION->ShowTitle()?></title>
+<title><?$APPLICATION->ShowTitle(false)?></title>
 </head>
 
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#FFFFFF">

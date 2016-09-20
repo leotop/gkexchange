@@ -33,7 +33,7 @@
         <div class="nav_chain_container">
             <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "nav_chain", Array(), false);?>
         </div>
-        <h1 class="h1 page-title"><?$APPLICATION->ShowTitle()?></h1>
+        <h1 class="h1 page-title"><?$APPLICATION->ShowProperty("title-top")?></h1>
     </div>
 </div>
 

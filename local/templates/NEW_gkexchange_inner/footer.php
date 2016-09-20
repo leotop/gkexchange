@@ -23,6 +23,7 @@
 <!--END wrapper-->
 
 <?include($_SERVER["DOCUMENT_ROOT"]."/local/templates/.default/include/footer_form.php")?>
+<?include($_SERVER["DOCUMENT_ROOT"]."/local/templates/.default/include/js.php");?>
 
 </body>
 </html>

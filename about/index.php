@@ -1,11 +1,12 @@
 <?
     require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("keywords", "интеграция 1с-битрикс и 1с, интеграция 1с и 1с-битрикс, интеграция 1с,  интеграция 1с-битрикс, интеграция сайта, интеграция 1с и битрикс24");
-    $APPLICATION->SetPageProperty("title", "О компании");
+$APPLICATION->SetPageProperty("title-top", "О компании – Gkexchange");
+$APPLICATION->SetPageProperty("keywords", "GKexchange,  интеграция 1с-битрикс,  1с, API, интернет-магазин, настройка");
+    $APPLICATION->SetPageProperty("title", "GKexchange - о компании – интеграция  1С и сайтов и интернет-магазинов  на Битрикс");
     $APPLICATION->SetPageProperty("page_title_top", "Почему мы круто разбираемся в интеграции 1C и 1С-Битрикс");
     $APPLICATION->SetPageProperty("page_title", "Почему мы круто разбираемся в интеграции 1C и 1С-Битрикс");
-    $APPLICATION->SetPageProperty("description", "Интеграция 1С и 1С-Битрикс – наш профиль уже долгие годы! Интеграция 1С и 1С-Битрикс от профессионалов – сделайте свой выбор прямо сейчас!");
-    $APPLICATION->SetTitle("О компании");
+    $APPLICATION->SetPageProperty("description", "Информация об компании GKexchange настройка интеграции интернет-магазинов и 1С");
+    $APPLICATION->SetTitle("GKexchange - о компании – интеграция 1С и сайтов и интернет-магазинов на Битрикс");
 ?>
 
 <?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(

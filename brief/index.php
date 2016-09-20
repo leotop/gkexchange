@@ -1,9 +1,10 @@
 <?
     require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("keywords", "интеграция 1с-битрикс и 1с, интеграция 1с и 1с-битрикс, интеграция 1с,  интеграция 1с-битрикс, интеграция сайта");
-$APPLICATION->SetPageProperty("description", "Заполните бриф для получения консультации по интеграции 1С и 1С-Битрикс");
-    $APPLICATION->SetTitle("Бриф");
-    $APPLICATION->SetPageProperty("page_title_top", "Бриф");
+$APPLICATION->SetPageProperty("title-top", "Бриф на интеграцию с 1С");
+$APPLICATION->SetPageProperty("keywords", "БРИФ, задание, консультация, 1с-Битрикс, интеграция, GKexchange");
+$APPLICATION->SetPageProperty("description", "Заполните бриф для  интеграции  интернет-магазина на 1С-Битрикс и 1С");
+    $APPLICATION->SetTitle("GKexchange - Бриф для получения консультации по интеграции 1С и 1С-Битрикс");
+    $APPLICATION->SetPageProperty("title", "Бриф на интеграцию с 1С");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:iblock.element.add.form", 
 	"brief_new", 

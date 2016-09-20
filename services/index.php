@@ -1,7 +1,10 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("keywords", "интеграция 1С и 1С-Битрикс, интеграция 1С и Битрикс24, интеграция 1с через api, выгрузка и загрузка данных через файлы, интеграция интернет-магазина и битрикс24, поддержка 1с, обновление 1с");
-$APPLICATION->SetTitle("Услуги");
+$APPLICATION->SetPageProperty("title-top", "Услуги – интеграция 1С");
+$APPLICATION->SetPageProperty("title", "Услуги – интеграция 1С");
+$APPLICATION->SetPageProperty("description", "Интеграция 1с и сайтов на Битриксе,  выгрузка данных через файлы, интеграция с Битрикс 24 от специалистов компании GKexchange");
+$APPLICATION->SetPageProperty("keywords", "услуги, Gkexchange, Москва, интеграция интернет-магазина, 1С, Битрикс 24, Bitrix, API, выгрузка данных");
+$APPLICATION->SetTitle("Услуги – интеграция интернет-магазина и 1С, настройка API от компании GKexchange");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"services.news", 
@@ -70,7 +73,7 @@ $APPLICATION->SetTitle("Услуги");
 		"SEF_MODE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "N",
-		"SET_TITLE" => "Y",
+		"SET_TITLE" => "N",
 		"SHOW_404" => "N",
 		"SORT_BY1" => "DATE_CREATE",
 		"SORT_BY2" => "SORT",

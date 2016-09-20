@@ -3,7 +3,6 @@
 	file_exists($_SERVER["DOCUMENT_ROOT"] . "/local/php_interface/include/.config.php") ? require_once($_SERVER["DOCUMENT_ROOT"] . "/local/php_interface/include/.config.php") : "";
     define("INDEX_PAGE_CONTENT_IBLOCK", 8); //инфоблок с контентом для главной страницы
 
-
     function arshow($array, $adminCheck = false) {
         global $USER;
         $USER = new Cuser;
@@ -16,7 +15,7 @@
         print_r($array);
         echo "</pre>";
     }
-
+    
     /***
     * get content for index page blocks
     * 

