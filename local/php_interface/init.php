@@ -103,4 +103,17 @@
 		$context = stream_context_create($opts);
 		$result = file_get_contents('http://corp.webgk.net/crm/configs/import/lead.php', false, $context);
 	}
+        
+    /**
+    * Редирект на страницу со / в конце
+    * 
+    */
+    function checkSlash(){
+        global $APPLICATION;
+        $url = $APPLICATION->GetCurPage();
+        $url_last_symbol = substr($url, -1);
+        if (defined('ERROR_404') && ERROR_404=='Y' && $url_last_symbol != "/"){
+            LocalRedirect($url."/", true, "301 Moved permanently");
+        }
+    }
 ?>
