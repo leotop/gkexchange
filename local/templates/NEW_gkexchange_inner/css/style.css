@@ -717,6 +717,18 @@ font: 24px/1 'PragmaticaMedium', sans-serif; }
     border-bottom-color: transparent; 
 }
 
+#footer .contacts_value {  
+    display: inline-block;
+    margin: 0 50px 0 0; 
+}
+
+#footer .contacts_value a{
+    display: inline;
+    text-decoration: none;
+    font: 16px/24px 'PragmaticaBookRegular', sans-serif;
+    color: #808080;       
+}
+
 #header {
     border-bottom: 1px solid #dadada;
     color: #ef3421; 
