@@ -107,7 +107,7 @@ margin: 0 0 43px; }
     border-top: 1px solid #d9d9d9;
     text-align: left;
     padding: 40px 0 20px 50px;
-    margin-bottom: 100px;
+    margin-bottom: 250px;
 display: block !important; }
 #menu #nav .nav_block {
     position: relative;
@@ -134,22 +134,55 @@ z-index: 1; }
 color: #ef3e21; }
 #menu .bottom {
     border-top: 1px solid #d9d9d9;
-    padding: 50px 0;
+    padding: 50px 0;    
+     }
+
+#menu .bot {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-z-index: 200; }
+    z-index: 200;
+    vertical-align:bottom;
+}
+
+#menu .bottom_contact {
+    padding: 25px 0;
+    border-top: 1px solid #d9d9d9; 
+    vertical-align:bottom;
+    height: 24px;
+    width: 100%;
+    display: inline-block;
+}
+
+#menu .contacts_value{
+    display: inline;
+    font-family: "PragmaticaBookRegular";    
+}
+
+#menu .image{
+    display: inline;
+}
+
+#menu .image img{
+    vertical-align:bottom;
+}
+
+#menu .contacts_value a {
+    color:#ef3421;
+    text-decoration: none;
+    border-bottom: 1px solid #ef3421;
+    font-family: "PragmaticaBookRegular";}
 
 #menu > div {
-    width: 259px;
+        width: 99%;
     background: #fff;
     border-right: 1px solid #e6eaeb;
     box-shadow: 3px -2px 3px #eaeff0;
-    padding: 50px 0 100px;
+    padding: 50px 0;
     min-height: 100%;
     position: relative;
-box-sizing: border-box; }
+    box-sizing: border-box; }
 
 .block {
     margin: 0 0 0 260px;
@@ -591,6 +624,18 @@ font: 16px/1 'PragmaticaBookRegular', sans-serif; }
 border-bottom: 1px solid #f9b2ab; }
 #footer .copyright span:hover {
 border-bottom-color: transparent; }
+
+#footer .contacts_value {  
+    display: inline-block;
+    margin: 0 50px 0 0; 
+}
+
+#footer .contacts_value a{
+    display: inline;
+    text-decoration: none;
+    font: 16px/24px 'PragmaticaBookRegular', sans-serif;
+    color: #808080;       
+}
 
 #header {
     padding: 50px 0 43px;

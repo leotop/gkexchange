@@ -29,10 +29,20 @@
         <!--END nav-->  
 
         <!--bottom-->
+        <div class="bot">
+        <div class="bottom_contact">
+            <div class="image"><img src="/i/mail.png" alt="e-mail"></div>
+            <div class="contacts_value"><a href="mailto:gk@gkexchange.ru">gk@gkexchange.ru</a></div>
+        </div>
+        <div class="bottom_contact">
+            <div class="image"><img src="/i/phone.jpg" alt="phone"></div>
+            <div class="contacts_value">+7 (495) 215-16-53</div>
+        </div>
         <div class="bottom">
             <div class="button1" onclick="show_popup(1)">
                 <?=GetMessage("ORDER_PROJECT")?>
             </div>
+        </div>
         </div>
     </div>
     <!--END bottom-->
