@@ -732,7 +732,6 @@ font: 24px/1 'PragmaticaMedium', sans-serif; }
 #header {
     border-bottom: 1px solid #dadada;
     color: #ef3421; 
-    height:185px;
 }
 
 .row {
@@ -748,6 +747,7 @@ font: 24px/1 'PragmaticaMedium', sans-serif; }
 .row .h1 {
     font: 31px/1 'PragmaticaBookRegular', sans-serif;
     letter-spacing: -0.2px; 
+    padding-bottom: 41px;
 }
 .row .h2 {
     color: #333;

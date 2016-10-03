@@ -11,8 +11,11 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-$APPLICATION->SetPageProperty("title-top", $arResult["NAME"]);
 ?>
+<?
+//arshow($arResult);
+$APPLICATION->SetPageProperty("title-top", $arResult["NAME"]);
+ ?>
 <div class="news-detail">
 	<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arResult["DETAIL_PICTURE"])):?>
 		<img
