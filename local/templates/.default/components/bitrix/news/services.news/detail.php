@@ -11,8 +11,9 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-?>
-<?$ElementID = $APPLICATION->IncludeComponent(
+
+$APPLICATION->SetPageProperty("title-top", $arResult["NAME"]);
+$ElementID = $APPLICATION->IncludeComponent(
 	"bitrix:news.detail",
 	"",
 	Array(
@@ -64,7 +65,8 @@ $this->setFrameMode(true);
 		"ADD_ELEMENT_CHAIN" => (isset($arParams["ADD_ELEMENT_CHAIN"]) ? $arParams["ADD_ELEMENT_CHAIN"] : '')
 	),
 	$component
-);?>
+);
+?>
 <p><a href="<?=$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["news"]?>"><?=GetMessage("T_NEWS_DETAIL_BACK")?></a></p>
 <?if($arParams["USE_RATING"]=="Y" && $ElementID):?>
 <?$APPLICATION->IncludeComponent(

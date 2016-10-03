@@ -11,6 +11,7 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+
 ?>
 <div class="news-index">
 <?foreach($arResult["IBLOCKS"] as $arIBlock):?>
