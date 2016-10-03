@@ -82,7 +82,7 @@ $APPLICATION->SetTitle("Выполненные проекты по интеграции от компании GKexchange
 		"SEF_MODE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "Y",
-		"SET_TITLE" => "Y",
+		"SET_TITLE" => "N",
 		"SHOW_404" => "N",
 		"SORT_BY1" => "SORT",
 		"SORT_BY2" => "NAME",
