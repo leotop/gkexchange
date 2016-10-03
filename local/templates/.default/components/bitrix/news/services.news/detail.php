@@ -11,8 +11,8 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-
-$APPLICATION->SetPageProperty("title-top", $arResult["NAME"]);
+?>
+<?
 $ElementID = $APPLICATION->IncludeComponent(
 	"bitrix:news.detail",
 	"",
