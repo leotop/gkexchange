@@ -25,7 +25,7 @@
 <?}?>
 
 <a href="/upload/brief.doc" class="button4" onclick="$(this).parent().submit();yaCounter23705659.reachGoal('ORDER3'); return true;"><?=GetMessage("DOWNLOAD_BRIEF")?></a>     
-<a href="javascript:void(0)" onclick="show_popup(2)" onclick="$(this).parent().submit();yaCounter23705659.reachGoal('ORDER5'); return true;" class="button5" title="<?=GetMessage("LOAD_BRIEF")?>"><?=GetMessage("IBLOCK_FORM_SUBMIT")?></a>
+<a  onclick="show_popup(2)" onclick="$(this).parent().submit();yaCounter23705659.reachGoal('ORDER5'); return true;" class="button5" title="<?=GetMessage("LOAD_BRIEF")?>"><?=GetMessage("IBLOCK_FORM_SUBMIT")?></a>
 
 <?if (!empty($arResult["ERRORS"])):?>
     <?ShowError(implode("<br />", $arResult["ERRORS"]))?>
