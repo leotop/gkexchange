@@ -1,4 +1,10 @@
 $(document).ready(function () {
+    //подстановка имени файла в псевдоинпут
+    $("input[name=BRIEF_FILE]").on("change", function(){
+        $(this).siblings("div").find("span").html($(this).val());
+    })
+    /////
+    
     //красивый скролл
     $("#menu").niceScroll({
         cursorwidth: "7px",
@@ -11,7 +17,7 @@ $(document).ready(function () {
     $("input[name='PHONE']").mask('+7(999)999-99-99');
 
     //проверка сабмита форм
-    $("form").submit(function(){ 
+    $("form[name='FORM']").submit(function(){ 
     
         var form = $(this);
      

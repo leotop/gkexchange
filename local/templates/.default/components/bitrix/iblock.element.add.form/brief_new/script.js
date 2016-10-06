@@ -1,14 +1,9 @@
-$(function(){
+(function(){
 
     //имитация поля выбора файла
     $("input[data-name=FILE_SELECT]").on("click", function(){
         $(this).siblings("input").click();
     })    
-    //подстановка имени файла в псевдоинпут
-    $("input[name=BRIEF_FILE]").on("change", function(){
-        $(this).siblings("div").find("span").html($(this).val());
-    })
-    /////
 
 
     $("input[data-code='PHONE']").mask('+7(999)999-99-99');

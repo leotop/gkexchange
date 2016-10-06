@@ -1,3 +1,4 @@
+<?require_once($_SERVER['DOCUMENT_ROOT']."/bitrix/modules/main/include/prolog_before.php");?>
 <?
             $name = $_POST["name"];
             $company = $_POST["company"];
@@ -17,7 +18,7 @@
             "; 
 
             ////////////////////////////    
-            $to1 = 'GK@GKEXCHANGE.RU';  $to1 = 'me@webgk.ru';
+            $to1 = 'GK@GKEXCHANGE.RU';  $to2 = 'me@webgk.ru';
             $mail = mail($to1,$theme,$mail_text, "From: brief@gkexchange.ru\r\n"."Content-type: text/html; Charset=utf-8 \r\n");
             $mail = mail($to2,$theme,$mail_text, "From: brief@gkexchange.ru\r\n"."Content-type: text/html; Charset=utf-8 \r\n");
 ?>
