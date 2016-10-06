@@ -82,6 +82,11 @@
     color: #000000;
 }
 
+.services-block .services-text a{
+    color: #808080;
+    font-family: PragmaticaBookRegular, sans-serif;
+}
+
 .services-block .services-text-main {
     margin-top: 45px;
     font-family: PragmaticaBookRegular, sans-serif;
