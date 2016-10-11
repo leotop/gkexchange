@@ -15,9 +15,10 @@ $(document).ready(function () {
     });
 
     $("input[name='PHONE']").mask('+7(999)999-99-99');
+    $("input[data-code='PHONE']").mask('+7(999)999-99-99');
 
     //проверка сабмита форм
-    $("form[name='FORM']").submit(function(){ 
+    $("form[name='FORM_ORDER']").submit(function(){ 
     
         var form = $(this);
      
@@ -90,6 +91,109 @@ $(document).ready(function () {
         return false;
 
     });
+    
+    $("form[name='FORM_BRIF']").submit(function(){ 
+    
+        var form = $(this);
+     
+        var reEmailCheck=/^[a-z0-9_-]+(\.[a-z0-9_-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2,4}$/i;
+        var rePhoneCheck = /^\d[\d\(\)\ -]{4,14}\d$/;
+
+        //проверяем заполненные поля
+        var br;
+
+        form.find("input.req, textarea.req").each(function(){
+            var el = $(this), val = el.val();
+
+            if (val.indexOf("Заполните") !== -1) {
+                val = "";
+            }
+            var validEmail = ($(this).attr("name")=="EMAIL") ? reEmailCheck.test(val) : true;      
+
+            if ((val.length > 0)&& validEmail) {}
+            else {
+
+                $(this).parent().removeClass("good");
+                $(this).removeClass("good");
+                $(this).parent().addClass("nogood");
+                $(this).addClass("nogood");
+                if (!validEmail)
+                    $(this).val("Заполните правильно e-mail");
+                if (val.length == 0)
+                    $(this).val("Заполните "+ (el.attr("placeholder") || "поле"));
+
+                br = "yes";
+            }
+
+        });
+
+        if (br == "yes") {
+
+            return false;
+        }
+
+        //если блокировка отправки не сработала, то запускаем аякс, который отправляет письмо на почту
+
+
+    });
+   
+   //имитация поля выбора файла
+    $("input[data-name=FILE_SELECT]").on("click", function(){
+        $(this).siblings("input").click();
+    })    
+
+    //валидация формы при отправке
+    $("form[name=brief_add]").on("submit", function(e) {
+
+
+        var form = $(this);  
+
+        var form_id = form.attr("id");  
+
+        var reEmailCheck=/^[a-z0-9_-]+(\.[a-z0-9_-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2,4}$/i;
+        var rePhoneCheck = /^\d[\d\(\)\ -]{4,14}\d$/;
+
+        //проверяем заполненные поля       
+        var br;
+
+        form.find(".req_field").each(function(){
+            var el = $(this), val = el.val();
+
+            if (val.indexOf("Заполните") !== -1) {
+                val = "";
+            }
+
+            var validEmail = ($(this).attr("name") == "EMAIL" || $(this).data("code") == "EMAIL") ? reEmailCheck.test(val) : true;      
+
+            if ((val.length > 0)&& validEmail) {
+                
+            } else {
+                $(this).parent().removeClass("good");
+                $(this).removeClass("good");
+                $(this).parent().addClass("nogood");
+                $(this).addClass("nogood");
+                if (!validEmail)
+                    $(this).val("Заполните правильно e-mail");
+                if (val.length == 0)
+                    $(this).val("Заполните "+ (el.attr("placeholder") || "поле"));
+
+                br = "yes";
+            }
+        });
+
+
+        if (br == "yes") {  
+            e.preventDefault();
+            $(".nogood:first").focus();  
+            if (form_id) {
+                document.location.href = "#" + form_id;   
+            }
+            return false;
+        } else {
+            $("form[name=iblock_add]").submit();
+        }
+    })    
+    
     $("input[type=text],textarea").focus(function(){
         var el = $(this), val = el.val();
         if (val.indexOf("Заполните") !== -1) {
