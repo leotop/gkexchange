@@ -19,7 +19,7 @@ $APPLICATION->SetTitle("Интеграция 1с и интернет магазина на 1С-Битрикс  - компа
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "N",
 		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "N",
+		"CACHE_TYPE" => "Y",
 		"CHECK_DATES" => "Y",
 		"COMPONENT_TEMPLATE" => "services.news",
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
@@ -74,7 +74,7 @@ $APPLICATION->SetTitle("Интеграция 1с и интернет магазина на 1С-Битрикс  - компа
 		"SEF_FOLDER" => "/services/",
 		"SEF_MODE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
-		"SET_STATUS_404" => "N",
+		"SET_STATUS_404" => "Y",
 		"SET_TITLE" => "N",
 		"SHOW_404" => "N",
 		"SORT_BY1" => "DATE_CREATE",
@@ -91,7 +91,7 @@ $APPLICATION->SetTitle("Интеграция 1с и интернет магазина на 1С-Битрикс  - компа
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",
-			"detail" => "#ELEMENT_ID#/",
+			"detail" => "#ELEMENT_CODE#/",
 		)
 	),
 	false
