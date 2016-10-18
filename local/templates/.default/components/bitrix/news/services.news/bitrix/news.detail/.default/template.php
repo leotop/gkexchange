@@ -13,8 +13,7 @@
 $this->setFrameMode(true);
 ?>
 <?
-//arshow($arResult);
-$APPLICATION->SetPageProperty("title-top", $arResult["NAME"]);
+//arshow($arResult["PROPERTIES"]);
  ?>
 <div class="news-detail">
 	<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arResult["DETAIL_PICTURE"])):?>

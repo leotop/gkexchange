@@ -1,8 +1,9 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("tags", "123");
 $APPLICATION->SetPageProperty("title-top", "Услуги – интеграция 1С");
-$APPLICATION->SetPageProperty("description", "Интеграция 1с и сайтов на Битриксе,  выгрузка данных через файлы, интеграция с Битрикс 24 от специалистов компании GKexchange");
-$APPLICATION->SetPageProperty("keywords", "услуги, Gkexchange, Москва, интеграция интернет-магазина, 1С, Битрикс 24, Bitrix, API, выгрузка данных");
+$APPLICATION->SetPageProperty("description", "Интеграция 1с");
+$APPLICATION->SetPageProperty("keywords", "услуги, Gkexchange, Москва,");
 $APPLICATION->SetTitle("Услуги – интеграция интернет-магазина и 1С, настройка API от компании GKexchange");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
@@ -15,11 +16,11 @@ $APPLICATION->SetTitle("Услуги – интеграция интернет-магазина и 1С, настройка AP
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "N",
-		"BROWSER_TITLE" => "-",
+		"BROWSER_TITLE" => "TITLE",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "N",
 		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
+		"CACHE_TYPE" => "N",
 		"CHECK_DATES" => "Y",
 		"COMPONENT_TEMPLATE" => "services.news",
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
@@ -33,8 +34,10 @@ $APPLICATION->SetTitle("Услуги – интеграция интернет-магазина и 1С, настройка AP
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
 		"DETAIL_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
+			0 => "DESCRIPTION",
+			1 => "KEYWORDS",
+			2 => "TITLE",
+			3 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
@@ -53,12 +56,15 @@ $APPLICATION->SetTitle("Услуги – интеграция интернет-магазина и 1С, настройка AP
 			1 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
-			0 => "PREVIEW",
-			1 => "",
+			0 => "DESCRIPTION",
+			1 => "KEYWORDS",
+			2 => "TITLE",
+			3 => "PREVIEW",
+			4 => "",
 		),
 		"MESSAGE_404" => "",
-		"META_DESCRIPTION" => "-",
-		"META_KEYWORDS" => "-",
+		"META_DESCRIPTION" => "DESCRIPTION",
+		"META_KEYWORDS" => "KEYWORDS",
 		"NEWS_COUNT" => "20",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
@@ -88,7 +94,7 @@ $APPLICATION->SetTitle("Услуги – интеграция интернет-магазина и 1С, настройка AP
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",
-			"detail" => "#ELEMENT_CODE#/",
+			"detail" => "#ELEMENT_ID#/",
 		)
 	),
 	false
