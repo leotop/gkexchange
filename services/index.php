@@ -1,9 +1,9 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("title-top", "Услуги – интеграция 1С");
-$APPLICATION->SetPageProperty("description", "GKEXCHANGE – заказать настройку интеграцию интернет-магазина Битрикса и 1С через API в Москве");
-$APPLICATION->SetPageProperty("keywords", "GKEXCHANGE, Москва, интеграция 1с, интернет магазин, Битрикс, Bitrix, стоимость, настройки, заказ, заказать, API");
-$APPLICATION->SetTitle("Интеграция 1с и интернет магазина на 1С-Битрикс  - компания GKEXCHANGE, стоимость настройки");
+$APPLICATION->SetPageProperty("description", "Интеграция 1с и сайтов на Битриксе, выгрузка данных через файлы, интеграция с Битрикс 24 от специалистов компании GKexchange");
+$APPLICATION->SetPageProperty("keywords", "услуги, Gkexchange, Москва, интеграция интернет-магазина, 1С, Битрикс 24, Bitrix, API, выгрузка данных");
+$APPLICATION->SetTitle("Услуги – интеграция интернет-магазина и 1С, настройка API от компании GKexchange");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"services.news", 
@@ -19,7 +19,7 @@ $APPLICATION->SetTitle("Интеграция 1с и интернет магазина на 1С-Битрикс  - компа
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "N",
 		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "Y",
+		"CACHE_TYPE" => "N",
 		"CHECK_DATES" => "Y",
 		"COMPONENT_TEMPLATE" => "services.news",
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
@@ -33,8 +33,10 @@ $APPLICATION->SetTitle("Интеграция 1с и интернет магазина на 1С-Битрикс  - компа
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
 		"DETAIL_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
+			0 => "DESCRIPTION",
+            1 => "KEYWORDS",
+            2 => "TITLE",
+            3 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
