@@ -34,9 +34,9 @@ $APPLICATION->SetTitle("Услуги – интеграция интернет-магазина и 1С, настройка AP
 		"DETAIL_PAGER_TITLE" => "Страница",
 		"DETAIL_PROPERTY_CODE" => array(
 			0 => "DESCRIPTION",
-            1 => "KEYWORDS",
-            2 => "TITLE",
-            3 => "",
+			1 => "KEYWORDS",
+			2 => "TITLE",
+			3 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
