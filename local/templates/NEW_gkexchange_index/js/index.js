@@ -102,6 +102,26 @@ $(document).ready(function () {
     $(".close").click(function(){
         popup_close($(this));
     });
+    
+    $('show_item').click(function(){
+        if(jQuery.browser.msie && parseInt(jQuery.browser.version)==6){
+            if($('#look1').css("display")=="block"){
+                $('#look1').css("display", "none");
+            }
+            else{
+                $('#look1').css("display", "block");
+            }
+        }
+        else{
+            $('#look1').toggle("slow");
+        }
+        if($('#link1').text()=='подробнее'){
+            $('#link1').text('кратко');
+        }
+        else{
+            $('#link1').text('подробнее');
+        }
+    });
 });
 
 $(window).resize(function(){

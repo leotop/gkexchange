@@ -579,7 +579,6 @@ cursor: pointer; }
 .bright:hover {
     background-position: 0px 35px;
 cursor: pointer; }
-
 .slide-item {
     width: 670px;
     margin: 0 auto;
@@ -888,9 +887,9 @@ text-align: center; }
     width: 700px;
     font-size: 1px;
     text-align: center; }
-.block2 .list .list1, .block2 .list .list3 {
+.block2 .list .list1, .block2 .list .list3 .list4 {
 width: 210px; }
-.block2 .list .list1 .line1, .block2 .list .list3 .line1 {
+.block2 .list .list1 .line1, .block2 .list .list3 .list4 .line1 {
 width: 110px; }
 #menu {
 width: 240px; }

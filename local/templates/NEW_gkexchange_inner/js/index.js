@@ -212,6 +212,20 @@ $(document).ready(function () {
     $(".close").click(function(){
         popup_close($(this));
     });
+    
+    $('#show_item').click(function(){
+        if(jQuery.browser.msie && parseInt(jQuery.browser.version)==6){
+            if($('.item').css("display")=="block"){
+                $('.item').css("display", "none");
+            }
+            else{
+                $('.item').css("display", "block");
+            }
+        }
+        else{
+            $('.item').toggle("slow");
+        }
+    });
 });
 
 $(window).resize(function(){
@@ -290,3 +304,24 @@ function slider_otziv(dir, sl) {
             break;
     }
 };
+// отображение элемента по id 
+ var s=[],s_timer=[];
+ function show(id,h,spd){ 
+     s[id]= s[id]==spd? -spd : spd;
+     s_timer[id]=setTimeout(function() {
+         var obj=document.getElementById(id);
+         if(obj.offsetHeight+s[id]>=h){
+             obj.style.height=h+"px";
+         }
+         else 
+         if(obj.offsetHeight+s[id]<=0){
+             obj.style.height=0+"px";
+             obj.style.display="none";
+         }
+         else {
+             obj.style.height=(obj.offsetHeight+s[id])+"px";
+             obj.style.display="block";
+             setTimeout(arguments.callee, 10);
+         }
+     }, 10);
+ };

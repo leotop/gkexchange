@@ -31,7 +31,7 @@
 
 <!--b1-->
 <div class="block block1" id="b1">
-    <div class="block-count"><span>01</span>/06</div>
+    <div class="block-count"><span>01</span>/07</div>
     <h1 class="h1">
         <?=$indexData["H1"]["VALUE"]?>
     </h1>
@@ -84,7 +84,7 @@
 
 <!--b2-->
 <div class="block block2" id="b2">
-    <div class="block-count"><span>02</span>/06</div>
+    <div class="block-count"><span>02</span>/07</div>
     <div class="h1">
         <?=$indexData["H2"]["VALUE"]?> 
     </div>
@@ -191,7 +191,7 @@
 
 <!--b3-->
 <div class="block block3" id="b3">
-    <div class="block-count"><span>03</span>/06</div>      
+    <div class="block-count"><span>03</span>/07</div>      
     <?
         if ($indexData["H3"]["VALUE"]["TYPE"]=="HTML") {
             echo $indexData["H3"]["~VALUE"]["TEXT"];
@@ -212,7 +212,7 @@
 
 <!--b4-->
 <div class="block block4" id="b4">
-    <div class="block-count"><span>04</span>/06</div>
+    <div class="block-count"><span>04</span>/07</div>
     <div class="h1">
         <?$APPLICATION->IncludeFile(SITE_DIR."include/slogan1.php", Array(),Array("MODE"=>"html"));?>
     </div>         
@@ -233,7 +233,7 @@
 
 <!--b5-->
 <div class="block block5" id="b5">
-    <div class="block-count"><span>05</span>/06</div>
+    <div class="block-count"><span>05</span>/07</div>
 
     <?$APPLICATION->IncludeFile(SITE_DIR."include/slogan2.php", Array(),Array("MODE"=>"html"));?>
 
@@ -246,9 +246,30 @@
 
 </div>
 <!--END b5-->
+
 <!--b6-->
+<div class="block block4" id="b4">
+    <div class="block-count"><span>06</span>/07</div>
+    <div class="h1">
+        <?$APPLICATION->IncludeFile(SITE_DIR."include/slogan3.php", Array(),Array("MODE"=>"html"));?>
+    </div>         
+
+    <div class="pluses">         
+        <ul>
+            <? foreach($indexData["LIST3"]["VALUE"] as $el) {?>
+                <li><?=$el["VALUE"]?></li>
+                <?}?>
+        </ul>                    
+        <a href="/services/" class="more"><?=GetMessage("KNOW_MORE")?></a>      
+    </div>
+    <div class="next-block"></div>               
+
+</div>
+<!--END b6-->
+
+<!--b7-->
 <div class="block block6" id="b6">
-    <div class="block-count"><span>06</span>/06</div>
+    <div class="block-count"><span>07</span>/07</div>
 
     <div class="h1">
         <?=GetMessage("INTEGRATION_SAMPLES")?>
@@ -333,4 +354,4 @@
 
 
     </div>
-    <!--END b6-->
+    <!--END b7-->
