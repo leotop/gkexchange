@@ -27,6 +27,7 @@
 <!--wrapper-->
 <div class="wrapper">
 
+<?include($_SERVER["DOCUMENT_ROOT"]."/local/templates/.default/include/js.php");?>  
 <?include($_SERVER["DOCUMENT_ROOT"]."/local/templates/.default/include/menu.php");?>       
 
 <!--b1-->
