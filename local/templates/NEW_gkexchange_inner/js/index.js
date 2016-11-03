@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    //подстановка имени файла в псевдоинпут
+    //РїРѕРґСЃС‚Р°РЅРѕРІРєР° РёРјРµРЅРё С„Р°Р№Р»Р° РІ РїСЃРµРІРґРѕРёРЅРїСѓС‚
     $("input[name=BRIEF_FILE]").on("change", function(){
         $(this).siblings("div").find("span").html($(this).val());
     })
     /////
     
-    //красивый скролл
+    //РєСЂР°СЃРёРІС‹Р№ СЃРєСЂРѕР»Р»
     $("#menu").niceScroll({
         cursorwidth: "7px",
         cursorcolor: "#fff",
@@ -17,7 +17,7 @@ $(document).ready(function () {
     $("input[name='PHONE']").mask('+7(999)999-99-99');
     $("input[data-code='PHONE']").mask('+7(999)999-99-99');
 
-    //проверка сабмита форм
+    //РїСЂРѕРІРµСЂРєР° СЃР°Р±РјРёС‚Р° С„РѕСЂРј
     $("form[name='FORM_ORDER']").submit(function(){ 
     
         var form = $(this);
@@ -25,13 +25,13 @@ $(document).ready(function () {
         var reEmailCheck=/^[a-z0-9_-]+(\.[a-z0-9_-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2,4}$/i;
         var rePhoneCheck = /^\d[\d\(\)\ -]{4,14}\d$/;
 
-        //проверяем заполненные поля
+        //РїСЂРѕРІРµСЂСЏРµРј Р·Р°РїРѕР»РЅРµРЅРЅС‹Рµ РїРѕР»СЏ
         var br;
 
         form.find("input.req, textarea.req").each(function(){
             var el = $(this), val = el.val();
 
-            if (val.indexOf("Заполните") !== -1) {
+            if (val.indexOf("Р—Р°РїРѕР»РЅРёС‚Рµ") !== -1) {
                 val = "";
             }
             var validEmail = ($(this).attr("name")=="EMAIL") ? reEmailCheck.test(val) : true;      
@@ -44,9 +44,9 @@ $(document).ready(function () {
                 $(this).parent().addClass("nogood");
                 $(this).addClass("nogood");
                 if (!validEmail)
-                    $(this).val("Заполните правильно e-mail");
+                    $(this).val("Р—Р°РїРѕР»РЅРёС‚Рµ РїСЂР°РІРёР»СЊРЅРѕ e-mail");
                 if (val.length == 0)
-                    $(this).val("Заполните "+ (el.attr("placeholder") || "поле"));
+                    $(this).val("Р—Р°РїРѕР»РЅРёС‚Рµ "+ (el.attr("placeholder") || "РїРѕР»Рµ"));
 
                 br = "yes";
             }
@@ -58,7 +58,7 @@ $(document).ready(function () {
             return false;
         }
 
-        //если блокировка отправки не сработала, то запускаем аякс, который отправляет письмо на почту
+        //РµСЃР»Рё Р±Р»РѕРєРёСЂРѕРІРєР° РѕС‚РїСЂР°РІРєРё РЅРµ СЃСЂР°Р±РѕС‚Р°Р»Р°, С‚Рѕ Р·Р°РїСѓСЃРєР°РµРј Р°СЏРєСЃ, РєРѕС‚РѕСЂС‹Р№ РѕС‚РїСЂР°РІР»СЏРµС‚ РїРёСЃСЊРјРѕ РЅР° РїРѕС‡С‚Сѓ
         else {
 
             $.post("/ajax/email_send.php", {  
@@ -71,19 +71,19 @@ $(document).ready(function () {
                 }, function(data){
 					data = data.trim();
                     if (data == "OK") {
-                    	if (form.find("input[name='IBLOCK_ID']").val() == 7) {// форма заказа проекта
-                    		$("#js_project_form_header").text("Ваша заявка принята!");
+                    	if (form.find("input[name='IBLOCK_ID']").val() == 7) {// С„РѕСЂРјР° Р·Р°РєР°Р·Р° РїСЂРѕРµРєС‚Р°
+                    		$("#js_project_form_header").text("Р’Р°С€Р° Р·Р°СЏРІРєР° РїСЂРёРЅСЏС‚Р°!");
                     		$("#form").hide();
                     		$("#js_project_form_header").css("margin-top", ($("#p1").height() / 2) - 190);
                     		setTimeout(function(){
                     			$(".close").click();
                     		}, 3000)
                     	} else {
-                    		alert("Ваша заявка принята!");  	
+                    		alert("Р’Р°С€Р° Р·Р°СЏРІРєР° РїСЂРёРЅСЏС‚Р°!");  	
                     	}
                         form.find("input[type=text], textarea").val("");     
                     } else {
-                        alert("Произошла ошибка! Проверьте правильность введенных данных и попробуйте снова."); 
+                        alert("РџСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°! РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РІРІРµРґРµРЅРЅС‹С… РґР°РЅРЅС‹С… Рё РїРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°."); 
                     }   
             });                                             
         }
@@ -99,13 +99,13 @@ $(document).ready(function () {
         var reEmailCheck=/^[a-z0-9_-]+(\.[a-z0-9_-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2,4}$/i;
         var rePhoneCheck = /^\d[\d\(\)\ -]{4,14}\d$/;
 
-        //проверяем заполненные поля
+        //РїСЂРѕРІРµСЂСЏРµРј Р·Р°РїРѕР»РЅРµРЅРЅС‹Рµ РїРѕР»СЏ
         var br;
 
         form.find("input.req, textarea.req").each(function(){
             var el = $(this), val = el.val();
 
-            if (val.indexOf("Заполните") !== -1) {
+            if (val.indexOf("Р—Р°РїРѕР»РЅРёС‚Рµ") !== -1) {
                 val = "";
             }
             var validEmail = ($(this).attr("name")=="EMAIL") ? reEmailCheck.test(val) : true;      
@@ -118,9 +118,9 @@ $(document).ready(function () {
                 $(this).parent().addClass("nogood");
                 $(this).addClass("nogood");
                 if (!validEmail)
-                    $(this).val("Заполните правильно e-mail");
+                    $(this).val("Р—Р°РїРѕР»РЅРёС‚Рµ РїСЂР°РІРёР»СЊРЅРѕ e-mail");
                 if (val.length == 0)
-                    $(this).val("Заполните "+ (el.attr("placeholder") || "поле"));
+                    $(this).val("Р—Р°РїРѕР»РЅРёС‚Рµ "+ (el.attr("placeholder") || "РїРѕР»Рµ"));
 
                 br = "yes";
             }
@@ -132,17 +132,17 @@ $(document).ready(function () {
             return false;
         }
 
-        //если блокировка отправки не сработала, то запускаем аякс, который отправляет письмо на почту
+        //РµСЃР»Рё Р±Р»РѕРєРёСЂРѕРІРєР° РѕС‚РїСЂР°РІРєРё РЅРµ СЃСЂР°Р±РѕС‚Р°Р»Р°, С‚Рѕ Р·Р°РїСѓСЃРєР°РµРј Р°СЏРєСЃ, РєРѕС‚РѕСЂС‹Р№ РѕС‚РїСЂР°РІР»СЏРµС‚ РїРёСЃСЊРјРѕ РЅР° РїРѕС‡С‚Сѓ
 
 
     });
    
-   //имитация поля выбора файла
+   //РёРјРёС‚Р°С†РёСЏ РїРѕР»СЏ РІС‹Р±РѕСЂР° С„Р°Р№Р»Р°
     $("input[data-name=FILE_SELECT]").on("click", function(){
         $(this).siblings("input").click();
     })    
 
-    //валидация формы при отправке
+    //РІР°Р»РёРґР°С†РёСЏ С„РѕСЂРјС‹ РїСЂРё РѕС‚РїСЂР°РІРєРµ
     $("form[name=brief_add]").on("submit", function(e) {
 
 
@@ -153,13 +153,13 @@ $(document).ready(function () {
         var reEmailCheck=/^[a-z0-9_-]+(\.[a-z0-9_-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2,4}$/i;
         var rePhoneCheck = /^\d[\d\(\)\ -]{4,14}\d$/;
 
-        //проверяем заполненные поля       
+        //РїСЂРѕРІРµСЂСЏРµРј Р·Р°РїРѕР»РЅРµРЅРЅС‹Рµ РїРѕР»СЏ       
         var br;
 
         form.find(".req_field").each(function(){
             var el = $(this), val = el.val();
 
-            if (val.indexOf("Заполните") !== -1) {
+            if (val.indexOf("Р—Р°РїРѕР»РЅРёС‚Рµ") !== -1) {
                 val = "";
             }
 
@@ -173,9 +173,9 @@ $(document).ready(function () {
                 $(this).parent().addClass("nogood");
                 $(this).addClass("nogood");
                 if (!validEmail)
-                    $(this).val("Заполните правильно e-mail");
+                    $(this).val("Р—Р°РїРѕР»РЅРёС‚Рµ РїСЂР°РІРёР»СЊРЅРѕ e-mail");
                 if (val.length == 0)
-                    $(this).val("Заполните "+ (el.attr("placeholder") || "поле"));
+                    $(this).val("Р—Р°РїРѕР»РЅРёС‚Рµ "+ (el.attr("placeholder") || "РїРѕР»Рµ"));
 
                 br = "yes";
             }
@@ -196,7 +196,7 @@ $(document).ready(function () {
     
     $("input[type=text],textarea").focus(function(){
         var el = $(this), val = el.val();
-        if (val.indexOf("Заполните") !== -1) {
+        if (val.indexOf("Р—Р°РїРѕР»РЅРёС‚Рµ") !== -1) {
             el.val("");
         }
         el.parent().removeClass("nogood");
@@ -226,6 +226,12 @@ $(document).ready(function () {
             $('.item').toggle("slow");
         }
     });
+    
+    
+
+    
+    
+    
 });
 
 $(window).resize(function(){
@@ -235,30 +241,30 @@ function windowResize(){
     $(".block1").css("min-height", $(window).height());
 }
 var animate = 0;
-//скролл страницы к выбранному блоку. на вход - номер блока
+//СЃРєСЂРѕР»Р» СЃС‚СЂР°РЅРёС†С‹ Рє РІС‹Р±СЂР°РЅРЅРѕРјСѓ Р±Р»РѕРєСѓ. РЅР° РІС…РѕРґ - РЅРѕРјРµСЂ Р±Р»РѕРєР°
 function main_scroll(n) {
-    animate = 1; //фиксируем факт анимации, чтобы в этот момент другие события не срабатывали
+    animate = 1; //С„РёРєСЃРёСЂСѓРµРј С„Р°РєС‚ Р°РЅРёРјР°С†РёРё, С‡С‚РѕР±С‹ РІ СЌС‚РѕС‚ РјРѕРјРµРЅС‚ РґСЂСѓРіРёРµ СЃРѕР±С‹С‚РёСЏ РЅРµ СЃСЂР°Р±Р°С‚С‹РІР°Р»Рё
 
 
-    //скролл страницы
+    //СЃРєСЂРѕР»Р» СЃС‚СЂР°РЅРёС†С‹
     var new_top = $("#b" + n).offset();
     $("html, body").stop().animate({ scrollTop: new_top.top}, 750 , function(){animate = 0;});
 
 }
 
-//проверяем, насколько проскролена страница, чтобы выбрать нужный пункт навигации
+//РїСЂРѕРІРµСЂСЏРµРј, РЅР°СЃРєРѕР»СЊРєРѕ РїСЂРѕСЃРєСЂРѕР»РµРЅР° СЃС‚СЂР°РЅРёС†Р°, С‡С‚РѕР±С‹ РІС‹Р±СЂР°С‚СЊ РЅСѓР¶РЅС‹Р№ РїСѓРЅРєС‚ РЅР°РІРёРіР°С†РёРё
 
 function show_popup(n){
     $("#p"+n).fadeIn(500);
     $(".block").addClass("blur");
     return false;
 }
-//закрытие всплывающего окна
+//Р·Р°РєСЂС‹С‚РёРµ РІСЃРїР»С‹РІР°СЋС‰РµРіРѕ РѕРєРЅР°
 function popup_close(e) {
     //
 
     $(e).parent(".popup").fadeOut(250);
-    //очищаем поля всех форм
+    //РѕС‡РёС‰Р°РµРј РїРѕР»СЏ РІСЃРµС… С„РѕСЂРј
     $("form input[type='text']").val("");
     $("textarea").val("");
     $("form input[type='text']").removeClass("nogood");
@@ -304,9 +310,9 @@ function slider_otziv(dir, sl) {
             break;
     }
 };
-// отображение элемента по id 
+// РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РїРѕ id 
  var s=[],s_timer=[];
- function show(id,h,spd){ 
+ function show_inner_text(id,h,spd){ 
      s[id]= s[id]==spd? -spd : spd;
      s_timer[id]=setTimeout(function() {
          var obj=document.getElementById(id);
@@ -325,3 +331,81 @@ function slider_otziv(dir, sl) {
          }
      }, 10);
  };
+ 
+ 
+     
+    
+    
+    
+    
+//РєР°СЂС‚Р° 
+var markersClicked = [], markers = [], ll;
+var openedMarker;
+var st;
+
+
+function initialize() {
+    if ($(".js_page_with_map").length) {
+        //С†РµРЅС‚СЂ
+        var coords = [{lat: 55.7508731, lng: 37.6532301, disabled: 0}];
+    
+        var center = {lat: 55.7508731, lng: 37.6532301};
+    
+        //ГЄГ Г°ГІГ  Г± Г­Г Г±ГІГ°Г®Г©ГЄГ Г¬ГЁ
+        var zoom = 16;
+        var map = new google.maps.Map(document.getElementById('map'), {
+            scrollwheel: false,
+            zoom: zoom,
+            disableDefaultUI: true,
+            center: center
+        });
+    
+    
+    
+        //С‚РѕС‡РєР°
+        var i = 0;
+        for (i = 0; i < coords.length; i++) {
+            markers[i] = addMarker(coords[i], map, i);
+            if (openedMarker && openedMarker.ind == i) {
+                openedMarker = markers[i];
+                openedMarker.setIcon("../i/point.png");
+            }
+        }    
+    
+        //Р·СѓРј +
+        $("#map-zoom-plus").off("click").on("click", function () {
+            var currentZoomLevel = zoom;
+            if (currentZoomLevel != 21) {
+                zoom = currentZoomLevel + 1;
+    
+            }
+            map.setZoom(zoom);
+    
+        });
+    
+        //Р·СѓРј -
+        $("#map-zoom-minus").off("click").on("click", function () {
+            var currentZoomLevel = zoom;
+            if (currentZoomLevel != 0) {
+                zoom = currentZoomLevel - 1;
+            }
+            map.setZoom(zoom);
+        });
+    }
+}
+
+function addMarker(location, map, i) {
+
+    var marker = new google.maps.Marker({
+        position: location,
+        icon: "../i/point.png",
+        map: map,
+        label: ""
+    });
+    marker.ind = i;   
+
+
+    return marker;
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
