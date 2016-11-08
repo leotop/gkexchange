@@ -1,0 +1,9 @@
+.pluses a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #656565;
+}
+
+.pluses a:hover {
+    color: #343434;
+}

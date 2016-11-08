@@ -258,9 +258,9 @@
     <div class="pluses">         
         <ul>
             <? foreach($indexData["LIST3"]["VALUE"] as $el) {?>
-                <li><?=$el["VALUE"]?></li>
-                <?}?>
-        </ul>                    
+                <li><?=html_entity_decode($el["VALUE"]["TEXT"])?></li>
+            <?}?>            
+        </ul>                 
         <a href="/services/" class="more"><?=GetMessage("KNOW_MORE")?></a>      
     </div>
     <div class="next-block"></div>               
