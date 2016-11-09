@@ -6,4 +6,5 @@ $MESS['INTEGRABLE_PRODUCTS'] = 'Интегрированные продукты и вспомогательные решен
 $MESS['SOLUTIONS'] = 'Использование готовых решений';
 $MESS['PRODUCTS_COUNT'] = 'Количество товаров';
 $MESS['TRADE_OFFERS_COUNT'] = 'Количество торговых предложений';
+$MESS['PERFORMED_WORKS'] = 'Выполненные работы';
 ?>

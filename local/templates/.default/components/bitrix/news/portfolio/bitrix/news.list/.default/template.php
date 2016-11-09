@@ -27,7 +27,7 @@
 
         <div class="portfolio-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
             <div class="portfolio-item-img-container">
-                <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>">
+                <a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>"></a>
             </div>
 
             <div class="portfolio-item-site" >

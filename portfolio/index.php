@@ -10,7 +10,7 @@ $APPLICATION->SetTitle("Портфолио – интеграция интернет магазина автозапчастей A
 	"portfolio", 
 	array(
 		"ADD_ELEMENT_CHAIN" => "Y",
-		"ADD_SECTIONS_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
@@ -49,7 +49,7 @@ $APPLICATION->SetTitle("Портфолио – интеграция интернет магазина автозапчастей A
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "11",
 		"IBLOCK_TYPE" => "gkexchange",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"LIST_FIELD_CODE" => array(
 			0 => "TAGS",
@@ -82,7 +82,7 @@ $APPLICATION->SetTitle("Портфолио – интеграция интернет магазина автозапчастей A
 		"SEF_MODE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "Y",
-		"SET_TITLE" => "N",
+		"SET_TITLE" => "Y",
 		"SHOW_404" => "N",
 		"SORT_BY1" => "SORT",
 		"SORT_BY2" => "NAME",

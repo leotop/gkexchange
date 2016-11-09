@@ -12,7 +12,13 @@
     /** @var CBitrixComponent $component */
     $this->setFrameMode(true);
 ?>
-
+<?
+    $NewTitle = $arResult["PROPERTIES"]["PROJECT_NAME"]["VALUE"]; 
+    $NewTitle = mb_strtolower($NewTitle);   
+    $NewTitle = preg_replace("/магазин/", "магазина", $NewTitle);
+    $NewTitle = 'Интеграция '.$NewTitle;                          
+    $APPLICATION->SetPageProperty("title-top", $NewTitle);
+?>
 <?$block_id = 0; ?>
 <?if(!empty($arResult["PROPERTIES"]["PROJECT_NAME"]["VALUE"]) 
     || (!empty($arResult["DETAIL_TEXT"]) || is_array($arResult["PROPERTIES"]["DESCRIPTION"]["VALUE"]["TEXT"]))){?>
@@ -27,7 +33,7 @@
         </div>
         
         <h2 class="h2">
-            <?=$arResult["PROPERTIES"]["PROJECT_NAME"]["VALUE"]?>
+            <?=GetMessage('PERFORMED_WORKS')?>
         </h2>
 
         <?if (is_array($arResult["PROPERTIES"]["DESCRIPTION"]["~VALUE"])){
