@@ -539,21 +539,21 @@ div.news-list img.preview_picture
 .new-services-block {
     margin-top: 40px;     
     width: 330px;
-    height: 500px;
-    float: left;
+    min-height: 500px; 
+    display: inline-block;
+    vertical-align: top;
     border: 1px solid #cdcdcd;
     border-radius: 10px;
     box-sizing: border-box;
 }
 
 .new-services-block:hover {
-    border: 2px solid #ef3822;     
-    width: 330px;
-    height: 500px;
+    border: 2px solid #ef3822;
+    overflow:hidden;
 }
 
 .new-services-block:nth-child(2n) {
-    float: right;
+    margin-left: 36px;
 }
 
 .new-services-block .title-top {
@@ -637,7 +637,7 @@ div.news-list img.preview_picture
 }
 
 .new-services-block .description-top {
-    height: 240px;
+    min-height: 240px;
     box-sizing: border-box;
     font: 13px 'PragmaticaBookRegular', sans-serif;
     color: #838383;
@@ -653,6 +653,10 @@ div.news-list img.preview_picture
 
 .new-services-block .description-bottom {
     height: 90px;
+}
+
+.new-services-block:hover .description-bottom {
+    height: 89px;
 }
 
 .new-services-block .more {

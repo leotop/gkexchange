@@ -12,7 +12,6 @@
     /** @var CBitrixComponent $component */
     $this->setFrameMode(true);
 ?>
-
 <div class="new-services">
     <?if($arParams["DISPLAY_TOP_PAGER"]):?>
         <?=$arResult["NAV_STRING"]?><br />
@@ -99,7 +98,8 @@
                     <?}?>                                       
                 <?endforeach;?>
              </div>
-            <?if ($arItem["DETAIL_PAGE_URL"] && $arItem["DETAIL_TEXT"]) {?>
+            <div class="description-bottom">
+            <?if (true/*$arItem["DETAIL_PAGE_URL"] && $arItem["DETAIL_TEXT"]*/) {?>
                 <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="more">
                     Узнать больше
                 </a>
@@ -107,6 +107,7 @@
 
                 </a>                 
             <?}?>
+            </div>
         </div>
         <?endforeach;?>
     <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
