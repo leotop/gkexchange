@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("title-top", "Выполненные проекты");
 $APPLICATION->SetPageProperty("keywords", "портфолио, выполненные проекты, интеграция, интернет-магазин, GKexchange");
 $APPLICATION->SetPageProperty("description", "GKexchange  - Портфолио работ – интернет-магазины запчастей, детских товаров, автозапчастей, обуви");
-$APPLICATION->SetTitle("Выполненные проекты по интеграции от компании GKexchange");
+$APPLICATION->SetTitle("Портфолио – интеграция интернет магазина автозапчастей Autobody -  GKexchange");
 ?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
