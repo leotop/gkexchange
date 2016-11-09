@@ -613,8 +613,8 @@ div.news-list img.preview_picture
     box-sizing: border-box;  
     font-family: 'PragmaticaMedium', sans-serif;
     font-size: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
     font-weight: normal;
     text-decoration: none;
 }
@@ -630,8 +630,8 @@ div.news-list img.preview_picture
 }
 
 .new-services-block:hover .title-bottom {
-    padding-left: 19px;
-    padding-right: 19px;
+    padding-left: 29px;
+    padding-right: 29px;
     color: #ef3822;
     text-decoration: none;
 }
