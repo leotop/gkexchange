@@ -552,6 +552,5 @@ function submitBriefForm(n){
             break;
     }
 
-}     
-
+}
 

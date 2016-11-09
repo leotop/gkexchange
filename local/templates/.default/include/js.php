@@ -7,6 +7,7 @@
 <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/jquery.nicescroll.min.js"></script>
 <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/jquery.nicescroll.plus.js"></script>
 <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/maskedinput.min.js"></script>
+<script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/clamp.js"></script>
 <!--END jquery plugins-->
 
 <!--user scripts-->
