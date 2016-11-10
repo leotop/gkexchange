@@ -23,7 +23,14 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Заполнить бриф", 
-		"/brief/",    
+		"/brief/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Инструкции", 
+		"/manuals/", 
 		Array(), 
 		Array(), 
 		"" 
