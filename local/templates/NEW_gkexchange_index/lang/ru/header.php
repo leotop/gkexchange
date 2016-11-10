@@ -14,4 +14,5 @@ $MESS["COMPANY"] = "Название компании";
 $MESS["EMAIL"] = "E-mail";
 $MESS["PHONE"] = "Номер телефона";
 $MESS["TEXT"] = "Комментарий";
+$MESS["RESUME"] = "Резюме";
 ?>

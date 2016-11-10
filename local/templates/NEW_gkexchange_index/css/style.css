@@ -476,6 +476,19 @@ display: none; }
     background: url(../img/arrow-up.png) no-repeat 0 0;
 top: 35px; }
 
+#b8 .next-block {
+    background: none;
+}
+#b8 .next-block:before {
+    background: url(../img/arrow-up.png) no-repeat 0 0;
+    top: -10px;
+    display: block;  
+}
+
+#b8 {
+    margin-bottom: 50px;
+}
+
 .block2:before, .block3:before, .block4:before, .block5:before, .block6:before {
     content: "";
     position: absolute;

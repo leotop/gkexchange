@@ -32,7 +32,7 @@
 
 <!--b1-->
 <div class="block block1" id="b1">
-    <div class="block-count"><span>01</span>/07</div>
+    <div class="block-count"><span>01</span>/08</div>
     <h1 class="h1">
         <?=$indexData["H1"]["VALUE"]?>
     </h1>
@@ -85,7 +85,7 @@
 
 <!--b2-->
 <div class="block block2" id="b2">
-    <div class="block-count"><span>02</span>/07</div>
+    <div class="block-count"><span>02</span>/08</div>
     <div class="h1">
         <?=$indexData["H2"]["VALUE"]?> 
     </div>
@@ -192,7 +192,7 @@
 
 <!--b3-->
 <div class="block block3" id="b3">
-    <div class="block-count"><span>03</span>/07</div>      
+    <div class="block-count"><span>03</span>/08</div>      
     <?
         if ($indexData["H3"]["VALUE"]["TYPE"]=="HTML") {
             echo $indexData["H3"]["~VALUE"]["TEXT"];
@@ -213,7 +213,7 @@
 
 <!--b4-->
 <div class="block block4" id="b4">
-    <div class="block-count"><span>04</span>/07</div>
+    <div class="block-count"><span>04</span>/08</div>
     <div class="h1">
         <?$APPLICATION->IncludeFile(SITE_DIR."include/slogan1.php", Array(),Array("MODE"=>"html"));?>
     </div>         
@@ -234,7 +234,7 @@
 
 <!--b5-->
 <div class="block block5" id="b5">
-    <div class="block-count"><span>05</span>/07</div>
+    <div class="block-count"><span>05</span>/08</div>
 
     <?$APPLICATION->IncludeFile(SITE_DIR."include/slogan2.php", Array(),Array("MODE"=>"html"));?>
 
@@ -250,7 +250,7 @@
 
 <!--b6-->
 <div class="block block4" id="b4">
-    <div class="block-count"><span>06</span>/07</div>
+    <div class="block-count"><span>06</span>/08</div>
     <div class="h1">
         <?$APPLICATION->IncludeFile(SITE_DIR."include/slogan3.php", Array(),Array("MODE"=>"html"));?>
     </div>         
@@ -270,7 +270,7 @@
 
 <!--b7-->
 <div class="block block6" id="b6">
-    <div class="block-count"><span>07</span>/07</div>
+    <div class="block-count"><span>07</span>/08</div>
 
     <div class="h1">
         <?=GetMessage("INTEGRATION_SAMPLES")?>
@@ -351,8 +351,24 @@
     <div class="button3" onclick="show_popup(1)" onclick="$(this).parent().submit();yaCounter23705659.reachGoal('ORDER2'); return true;">
         <?=GetMessage("ORDER_CONSULTATION")?>
     </div>
-    <div class="next-block" onclick="main_scroll(1)"></div>
-
-
     </div>
     <!--END b7-->
+<!--b8-->
+<div class="block block4" id="b8">
+    <div class="block-count"><span>08</span>/08</div>
+    <div class="h1">
+        <?$APPLICATION->IncludeFile(SITE_DIR."include/slogan4.php", Array(),Array("MODE"=>"html"));?>
+    </div>         
+
+    <div class="pluses">         
+        <ul>
+            <? foreach($indexData["LIST4"]["VALUE"] as $el) {?>
+                <li><?=$el["VALUE"]?></li>
+            <?}?>            
+        </ul>                 
+        <a href="/services/" class="more"><?=GetMessage("KNOW_MORE")?></a>      
+    </div>
+        <div class="line"></div>
+    <div class="next-block" onclick="main_scroll(1)"></div> 
+</div>
+<!--END b8-->
