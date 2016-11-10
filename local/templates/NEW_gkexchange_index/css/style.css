@@ -469,12 +469,10 @@ display: none; }
 .block6 .block-count {
     padding-top: 45px; 
 }
-.block6 .next-block {
-    background: none; 
-}
+
 .block6 .next-block:before {
-    background: url(../img/arrow-up.png) no-repeat 0 0;
-top: 35px; }
+    display: none;
+}
 
 #b8 .next-block {
     background: none;
@@ -487,6 +485,12 @@ top: 35px; }
 
 #b8 {
     margin-bottom: 50px;
+}
+
+#b8 ul li {
+    background-position-y: 28px;
+    color: #767676;
+    font: 16px/24px 'PragmaticaBookRegular', sans-serif;  
 }
 
 .block2:before, .block3:before, .block4:before, .block5:before, .block6:before {

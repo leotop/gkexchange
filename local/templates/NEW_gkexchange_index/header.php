@@ -351,7 +351,8 @@
     <div class="button3" onclick="show_popup(1)" onclick="$(this).parent().submit();yaCounter23705659.reachGoal('ORDER2'); return true;">
         <?=GetMessage("ORDER_CONSULTATION")?>
     </div>
-    </div>
+    <div class="next-block"></div> 
+</div>
     <!--END b7-->
 <!--b8-->
 <div class="block block4" id="b8">
