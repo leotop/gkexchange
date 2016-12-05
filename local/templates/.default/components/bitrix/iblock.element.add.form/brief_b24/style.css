@@ -1,0 +1,28 @@
+.js-wrong_data {
+    border-color: #ef3421 !important;
+    border-width: 2px !important;
+    box-shadow: 0 8px 10px 3px #f3d4d1 !important;
+    color:#ef3421 !important;
+}
+
+.file_select {
+    border: 2px solid #dadada;
+    border-radius: 5px;
+    color: #dadada;
+    cursor: pointer;
+    float: right;
+    font-size: 29px;
+    height: 34px;
+    line-height: 21px;
+    margin: -10px -8px 0;
+    text-align: center;
+    width: 40px;
+}
+
+.file_select_field {
+    cursor: pointer;
+}
+
+.brief_load_success {
+    color: green !important;
+}

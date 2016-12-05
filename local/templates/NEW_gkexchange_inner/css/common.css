@@ -20,18 +20,16 @@ input:focus :-ms-input-placeholder,textarea:focus :-ms-input-placeholder,.nogood
 }
 .radio {
   display: none;
-
 }
 .radio-group {
-  display: block;
+  display:table;
   float: left;
   width: 310px;
 }
 .radio + label {
   display: inline-block;
   font: 15px/21px 'PragmaticaBookRegular', sans-serif;
-  background: url(../img/radio.png) no-repeat 0 0;
-  height: 21px;
+  background: url(../img/radio_nochecked.png) no-repeat scroll 0 0; 
   margin: 0 35px 10px 0;
   padding: 0 0 0 35px;
   cursor: pointer;
@@ -41,6 +39,6 @@ input:focus :-ms-input-placeholder,textarea:focus :-ms-input-placeholder,.nogood
 }
 
 .radio:checked + label  {
-  background-position: 0 100%;
+  background: url(../img/radio_checked.png) no-repeat scroll 0 0;
   color: #ef3e21;
 }
