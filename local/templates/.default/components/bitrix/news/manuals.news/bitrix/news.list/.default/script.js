@@ -17,11 +17,11 @@ $(document).ready(function() {
         } else {
             $(this).next().find('.description-top').height(LeftHeight);    
         };   
-    });        
+    });   
     $('.new-services-block .description-bottom a').on("mouseover", function(){
         $(this).siblings('.new-services-block .description-bottom a').addClass("jshover");   
     });       
     $('.new-services-block .description-bottom a').on("mouseleave", function(){
         $(this).siblings('.new-services-block .description-bottom a').removeClass("jshover");   
-    });        
+    });    
 });
