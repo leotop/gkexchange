@@ -116,4 +116,26 @@
             LocalRedirect($url."/", true, "301 Moved permanently");
         }
     }
+    
+    AddEventHandler("iblock", "OnBeforeIBlockElementAdd", "BeforeElementAddSendMail"); 
+    function BeforeElementAddSendMail(&$arFields)
+    {                          
+        if(($arFields["IBLOCK_ID"] == BRIEF_BITRIX24_BLOCK_ID) || ($arFields["IBLOCK_ID"] == BRIEF_1C_BITRIX_BLOCK_ID))
+        {                            
+            if($arFields["IBLOCK_ID"] == BRIEF_BITRIX24_BLOCK_ID) {
+                $formName = '1С и 1С-Битрикс';    
+            } elseif($arFields["IBLOCK_ID"] == BRIEF_1C_BITRIX_BLOCK_ID) {
+                $formName = '1С и Битрикс24';                
+            }                
+            $timeorder = CIBlockPropertyEnum::GetByID($arFields["PROPERTY_VALUES"]["73"]);
+            $arEventFields = array(
+                "FORM_NAME"     => $formName,
+                "NAME"          => $arFields["NAME"],
+                "COMPANY"       => $arFields["PROPERTY_VALUES"]["52"],
+                "EMAIL"         => $arFields["PROPERTY_VALUES"]["55"],
+                "PHONE"         => $arFields["PROPERTY_VALUES"]["54"]
+            );                                            
+            CEvent::Send("NEW_BRIEF_LOAD", SITE_ID, $arEventFields);
+        }
+    }
 ?>
